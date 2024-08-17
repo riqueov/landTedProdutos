@@ -1,0 +1,88 @@
+body{
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    overflow-x: hidden;
+}
+.custom-background {
+    background-image: url('assets/bg-n.svg');
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+}
+::-webkit-scrollbar {
+    width: 14px; /* Largura da barra de rolagem */
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #414141, #80F4FF); /* Gradiente no thumb */
+    /* border-radius: 10px; Bordas arredondadas do thumb */
+    border: 2px solid white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #414141, #70D7E7); /* Gradiente mais escuro ao passar o mouse */
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(180deg, #414141, #5DBFC5); /* Gradiente ainda mais escuro ao clicar */
+}
+.container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; 
+    flex-wrap: wrap; 
+}
+.container-infos {
+    display: flex; 
+    margin: 7% auto 0;
+    background-color: rgba(255, 255, 255, 0.909); 
+    border-radius: 9px; 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card {
+    width: 200px; /* Ajuste conforme necessário */
+    height: 200px; /* Define a altura igual à largura para criar um quadrado */
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.card-body i {
+    margin-bottom: 1rem; /* Ajusta a margem inferior do ícone */
+    font-size: 3rem; /* Ajusta o tamanho do ícone conforme necessário */
+}
+.btn {
+    margin-top: 1rem; /* Ajusta a margem superior do botão */
+}
+.fixed-icon {
+    bottom: 20px; /* Distância do canto inferior da tela */
+    font-size: 3rem; /* Ajuste o tamanho do ícone conforme necessário */
+    color: #007bff; /* Cor do ícone, ajuste conforme necessário */
+    z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
+}
+.fixed-circle {
+    position: fixed; /* Fixa o círculo no canto da tela */
+    right: 20px; /* Distância do canto direito da tela */
+    bottom: 20px; /* Distância do canto inferior da tela */
+    width: 90px; /* Largura do círculo */
+    height: 90px; /* Altura do círculo */
+    background-color: #04c704; /* Cor de fundo do círculo */
+    border-radius: 50%; /* Torna o elemento circular */
+    display: flex; /* Centraliza o ícone dentro do círculo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    z-index: 1000; /* Garante que o círculo fique acima de outros elementos */
+    transition: transform 0.3s ease; /* Suaviza a transição de escala */
+}
+
+.fixed-circle i {
+    color: white; /* Cor do ícone */
+    font-size: 2.8rem; /* Tamanho do ícone */
+}
+
+.fixed-circle:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do círculo e do ícone ao passar o mouse */
+}
