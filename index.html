@@ -17,9 +17,12 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
-    <div class="container">
+  <nav class="navbar navbar-expand-md bg-dark sticky-top pb-0 d-block" data-bs-theme="dark">
       <a class="navbar-brand" href="#">
+        <img src="assets/logo.svg" class="bi" width="50" height="50"></img>
+      </a>
+    <div class="container">
+      <a class="navbar-brand-mobile" href="#">
         <img src="assets/logo.svg" class="bi" width="50" height="50"></img>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
@@ -33,33 +36,52 @@
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav flex-grow-1 justify-content-between align-items-center ">
-            <li class="nav-item"><a class="nav-link" href="#">
+            <!-- <li class="nav-item"><a class="nav-link" href="#">
                 <svg class="bi" width="24" height="24">
                   <use xlink:href="#aperture"></use>
                 </svg>
-              </a></li>
-            <li class="nav-item "><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item "><a class="nav-link" href="catalogo.html">Catálogo</a></li>
-            <div class="btn-group">
-              <button type="button" class="btn dropdown-toggle m-0" data-bs-toggle="dropdown" aria-expanded="false">
+              </a></li> -->
+            <li class="nav-item "><a class="nav-link" href="index.html">Home</a></li>
+            <!-- <li class="nav-item "><a class="nav-link" href="catalogo.html">Catálogo</a></li> -->
+            <div class="btn-group mobile">
+              <button type="button" class="btn dropdown-toggle m-0 w-100" data-bs-toggle="dropdown" aria-expanded="false">
                 Categorias
               </button>
+              
               <ul class="dropdown-menu dropdown-menu-end">
-                <li><button class="dropdown-item" type="button">Aniversários</button></li>
-                <li><button class="dropdown-item" type="button">Casamentos</button></li>
-                <li><button class="dropdown-item" type="button">Formatura</button></li>
+                <li><button class="dropdown-item" type="button" href="catalogo.html">Todos</button></li>
+                <li><button class="dropdown-item" type="button" href="catalogo.html?filter=Copo">Copos e Taças</button></li>
+                <li><button class="dropdown-item" type="button" href="catalogo.html?filter=Beleza">Beleza</button></li>
+                <li><button class="dropdown-item" type="button" href="catalogo.html?filter=Outros">Outros</button></li>
               </ul>
             </div>
+            <li class="nav-item desktop">      
+              <button class="nav-link" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" 
+              aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                Categorias
+              </button>
             </li>
-            <li class="nav-item "><a class="nav-link" href="#">Dúdivdas</a></li>
-            <li class="nav-item "></li>
+            <li class="nav-item "><a class="nav-link" href="#">Sobre</a></li>
           </ul>
 
         </div>
       </div>
     </div>
+    <div style="padding: 0 17px;"></div>
   </nav>
+  <div class="collapse p-0" id="navbarToggleExternalContent" data-bs-theme="dark">
+    <div class="bg-dark p-0">
+      <!-- <h5 class="text-body-emphasis h4 w-50 ms-4">Collapsed content</h5> -->
+      <ul class="m-0">
+        <li class="nav-item d-flex"><a class="nav-link" href="catalogo.html" style="color:white;margin: 1% auto;">Todos</a></li>
+        <li class="nav-item d-flex"><a class="nav-link" href="catalogo.html?filter=Copo" style="color:white;margin: 1% auto;">Copos e Taças</a></li>
+        <li class="nav-item d-flex"><a class="nav-link" href="catalogo.html?filter=Beleza" style="color:white;margin: 1% auto;">Beleza</a></li>
+        <li class="nav-item d-flex"><a class="nav-link" href="catalogo.html?filter=Outros" style="color:white;margin: 1% auto;">Outros</a></li>
+      </ul>
+    </div>
+  </div>  
 
+  
   <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-body-tertiary custom-background">
     <div class="col-md-6 p-lg-5 mx-auto my-3">
       <h1 class="display-3 fw-bold">TeD Personalizações</h1>
@@ -68,93 +90,176 @@
         <span><i class="bi bi-gift" style="font-size: 1.7rem; color: #e94f7b;"></i></span>
         <span><i class="bi bi-stars" style="font-size: 1.7rem; color: #f5b781;"></i></span>
       </h3>
-      <!-- <div class="d-flex gap-3 justify-content-center lead fw-normal">
-            <a class="icon-link" href="#">
-              Learn more
-              <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-            </a>
-            <a class="icon-link" href="#">
-              Buy
-              <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-            </a>
-          </div> -->
 
-      <div class="container-infos justify-content-between ">
-        <div class="d-flex w-100 justify-content-around m-auto p-4">
-          <div class="d-flex align-items-center">
+      <div class="container-infos justify-content-between">
+        <div class="d-flex flex-column flex-md-row w-100 justify-content-around m-auto p-4">
+          <div class="d-flex align-items-center mb-3 mb-md-0">
             <i class="bi bi-box-seam" style="font-size: 2.2rem; color: #e94f7b;"></i>
-            <h4 class="my-0 fw-normal">Envio para todo Brasil.</h4>
+            <h4 class="my-0 fw-normal ms-2">Envio para todo Brasil.</h4>
           </div>
-          <div class="d-flex align-items-center">
+          <div class="d-flex align-items-center mb-3 mb-md-0">
             <i class="bi bi-palette" style="font-size: 2rem; color: #f5b781;"></i>
-            <h4 class="my-0 fw-normal">Criamos sua arte.</h4>
+            <h4 class="my-0 fw-normal ms-2">Criamos sua arte.</h4>
           </div>
           <div class="d-flex align-items-center">
             <i class="bi bi-credit-card" style="font-size: 2.2rem; color: #007bff;"></i>
-            <h4 class="my-0 fw-normal">Pagamentos em até 12x</h4>
+            <h4 class="my-0 fw-normal ms-2">Pagamentos em até 12x</h4>
           </div>
         </div>
-
       </div>
+      
     </div>
 
 
 
-    <h1 class="fw-bold mb-4 pb-4">Principais Categorias</h1>
+    <h1 class="fw-bold m-4 p-1">Principais Categorias</h1>
 
     <div class="container">
-      <a href="" style="text-decoration: none;" class="col mt-4 d-flex justify-content-center">
+      <a href="catalogo.html?filter=Copo" style="text-decoration: none;" class="col mt-4 d-flex justify-content-center">
         <div class="card mb-4 rounded-3 shadow-sm" style="border-color: #fa0f0f;">
           <div class="card-body">
-            <h4 class="my-0 fw-normal">Aniversários</h4>
-            <i class="bi bi-cake2" style="font-size: 4rem; color: #fa0f0f;"></i>
-          </div>
-        </div>
-      </a>
-      <a href="" style="text-decoration: none;" class="col mt-4 d-flex justify-content-center">
-        <div class="card mb-4 rounded-3 shadow-sm" style="border-color: #f30071;">
-          <div class="card-body">
-            <h4 class="my-0 fw-normal">Casamentos</h4>
-            <i class="bi bi-balloon-heart" style="font-size: 4rem; color: #f30071;"></i>
+            <h4 class="my-0 fw-normal">Copos e Taças</h4>
+            <i class="bi bi-cup-straw" style="font-size: 4rem; color: #fa0f0f;"></i>
           </div>
         </div>
       </a>
       <a href="" style="text-decoration: none;" class="col mt-4 d-flex justify-content-center">
         <div class="card mb-4 rounded-3 shadow-sm" style="border-color: #c500b5;">
           <div class="card-body">
-            <h4 class="my-0 fw-normal">Debutantes</h4>
+            <h4 class="my-0 fw-normal">Beleza</h4>
             <i class="bi bi-stars" style="font-size: 4rem; color: #c500b5;"></i>
           </div>
         </div>
       </a>
       <a href="" style="text-decoration: none;" class="col mt-4 d-flex justify-content-center">
-        <div class="card mb-4 rounded-3 shadow-sm" style="border-color: #6f00ff;">
+        <div class="card mb-4 rounded-3 shadow-sm" style="border-color: #a9dad1;">
           <div class="card-body">
-            <h4 class="my-0 fw-normal">Formaturas</h4>
-            <i class="bi bi-mortarboard" style="font-size: 4rem; color: #6f00ff;"></i>
-          </div>
-        </div>
-      </a>
-      <a href="" style="text-decoration: none;" class="col mt-4 d-flex justify-content-center">
-        <div class="card mb-4 rounded-3 shadow-sm" style="border-color: #007bff;">
-          <div class="card-body">
-            <h4 class="my-0 fw-normal">Outras</h4>
-            <i class="bi bi-patch-plus" style="font-size: 4rem; color: #007bff;"></i>
+            <h4 class="my-0 fw-normal">Muito mais</h4>
+            <i class="bi bi-patch-plus" style="font-size: 4rem; color: #a9dad1;"></i>
           </div>
         </div>
       </a>
     </div>
 
-    <div class="fixed-circle">
-      <a href="https://wa.me/5511943858290?text=Olá,%20gostaria%20de%20mais%20informações!" target="_blank">
-        <i class="bi bi-whatsapp fixed-icon"></i></a>
-    </div>
 
+    <div style="display: flex; margin-top: 5%;">
+      <div id="carouselExampleInterval" class="carousel slide" style="width: 50%;" data-bs-ride="carousel">
+        <div class="carousel-inner img-carrocel">
+          <div class="carousel-item" data-bs-interval="10000">
+            <img src="assets/kit.png" style="width: 900px; position: relative; zoom: 0.83; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);" alt="...">
+          </div>
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img src="assets/pentes.png" style="width: 900px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+
+      <div class="div-conteudo">
+        <div class="sub-titulo">
+          <h3>Sucesso de vendas - Brindes de beleza</h3>  
+          <h5>Temos uma variedade enorme e muitas opções de personalização</h5>
+          <div class="texto-conteudo">
+            <a href="https://wa.me/5511995292623?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20brindes%20de%20beleza!" target="_blank"><h5>Fale conosco!</h5></a>
+            <a href="catalogo.html?filter=Beleza"><h5>Conheça todos os produtos.</h5></a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
 
     <div class="product-device shadow-sm d-none d-md-block"></div>
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
   </div>
 
+  <div id="carouselExampleInterval2" class="carousel slide" data-bs-ride="carousel" style="width: 50%; margin: auto; ">
+    <div class="carousel-inner aval-carrocel">
+      <h2 style="text-align: center; background-color: #f8f9fa; margin: 0; padding-bottom: 10px;">Feedback dos Nossos Clientes</h2>
+
+      <div class="carousel-item active" aria-colspan="" data-bs-interval="10000">
+        <div class="titulo-coment">
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>  
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>
+          <div class="coment">
+            <h5>Muito obrigada amei, Ficou linda!😍🥹<br>Irei pedir outras vezes com certeza🙏</h5>
+          </div>
+          <div class="coment">
+            <h5>- Christina</h5>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <div class="titulo-coment">
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>  
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>
+          <div class="coment">
+            <h5>Muito obrigado pelo trabalho incrível❤️<br>Perfeito!</h5>
+          </div>
+          <div class="coment">
+            <h5>- Fernanda</h5>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="titulo-coment">
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>  
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>
+          <div class="coment">
+            <h5>Ficaram perfeitos, melhor do que esperava<br>Muito obrigado mesmo.🫶🏼🫶🏼🫶🏼</h5>
+          </div>
+          <div class="coment">
+            <h5>- Letícia</h5>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="titulo-coment">
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>  
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: #f5b781;"></i>
+          <div class="coment">
+            <h5>Adorei as lembranças de vocês, simplesmente lindas, fora o atendimento maravilhoso.<br>Estão de parabéns 👏🏻👏🏻👏🏻</h5>
+          </div>
+          <div class="coment">
+            <h5>- Letícia</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval2" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval2" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+  <div class="fixed-circle">
+    <a href="https://wa.me/5511995292623?text=Olá,%20gostaria%20de%20mais%20informações!" target="_blank">
+      <i class="bi bi-whatsapp fixed-icon"></i></a>
+  </div>
 
 
   <footer class="d-flex flex-column align-items-center py-5 bg-dark border-top text-white-50" data-bs-theme="dark">
@@ -164,7 +269,6 @@
           <h5>Links Úteis</h5>
           <ul class="list-unstyled">
             <li><a href="#" class="text-white-50 text-decoration-none">Home</a></li>
-            <li><a href="#" class="text-white-50 text-decoration-none">Sobre nós</a></li>
             <li><a href="#" class="text-white-50 text-decoration-none">Produtos</a></li>
           </ul>
         </div>
@@ -174,9 +278,11 @@
           <a href="#" class="text-white-50"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
         </div>
         <div class="col-12 col-md-4 text-end text-md-end text-center">
-          <h5>TeD Personalizações 2024.</h5>
-          <p>Todos os direitos reservados.</p>
-          <img src="assets/bgn-logo.png" class="bi mt-3" width="34" height="34"></img>
+          <div style="display: inline-block;">
+            <h5>TeD Personalizações 2024.</h5>
+            <p>Todos os direitos reservados.</p>
+          </div>
+          <img src="assets/logo.svg" class="bi mb-4 ms-4" width="40" height="40"></img>
         </div>
       </div>
     </div>

@@ -10,324 +10,683 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style-catalogo.css">
   <title>TeD Personalizações</title>
   <link rel="icon" type="image/x-icon" href="assets/Logo.svg" />
 </head>
 
-<style>
-  body {
-    background-image: url('assets/bg-n.svg');
-    background-size: cover; /* Faz a imagem cobrir todo o fundo */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Impede que a imagem se repita */
-  }
-
-  .height-definido {
-    height: 90vw;
-  }
-
-  ::-webkit-scrollbar {
-    width: 14px;
-    /* Largura da barra de rolagem */
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #414141, #80F4FF);
-    /* Gradiente no thumb */
-    /* border-radius: 10px; Bordas arredondadas do thumb */
-    border: 2px solid white;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #414141, #70D7E7);
-    /* Gradiente mais escuro ao passar o mouse */
-  }
-
-  ::-webkit-scrollbar-thumb:active {
-    background: linear-gradient(180deg, #414141, #5DBFC5);
-    /* Gradiente ainda mais escuro ao clicar */
-  }
-
-
-  .custom-background {
-    background-image: url('assets/bg-n.svg');
-    background-size: cover; /* Faz a imagem cobrir todo o fundo */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Impede que a imagem se repita */
-}
-
-  .navbar-brand img {
-    height: 34px;
-    width: auto;
-  }
-
-  .offcanvas-body {
-    padding-top: 20px;
-  }
-
-  .card {
-    height: 100%;
-  }
-
-  .fixed-icon {
-    bottom: 20px;
-    /* Distância do canto inferior da tela */
-    font-size: 3rem;
-    /* Ajuste o tamanho do ícone conforme necessário */
-    color: #007bff;
-    /* Cor do ícone, ajuste conforme necessário */
-    z-index: 1000;
-    /* Garante que o ícone fique acima de outros elementos */
-  }
-
-  .fixed-circle {
-    position: fixed;
-    /* Fixa o círculo no canto da tela */
-    right: 20px;
-    /* Distância do canto direito da tela */
-    bottom: 20px;
-    /* Distância do canto inferior da tela */
-    width: 90px;
-    /* Largura do círculo */
-    height: 90px;
-    /* Altura do círculo */
-    background-color: #04c704;
-    /* Cor de fundo do círculo */
-    border-radius: 50%;
-    /* Torna o elemento circular */
-    display: flex;
-    /* Centraliza o ícone dentro do círculo */
-    justify-content: center;
-    /* Centraliza horizontalmente */
-    align-items: center;
-    /* Centraliza verticalmente */
-    z-index: 1000;
-    /* Garante que o círculo fique acima de outros elementos */
-    transition: transform 0.3s ease;
-    /* Suaviza a transição de escala */
-  }
-
-  .fixed-circle i {
-    color: white;
-    /* Cor do ícone */
-    font-size: 2.8rem;
-    /* Tamanho do ícone */
-  }
-
-  .fixed-circle:hover {
-    transform: scale(1.2);
-    /* Aumenta o tamanho do círculo e do ícone ao passar o mouse */
-  }
-
-  @media (max-width: 768px) {
-    #filterForm {
-      margin-bottom: 20px;
-    }
-
-    #productList {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-</style>
-
 <body>
 
-  <nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="assets/bgn-logo.png" class="bi" width="34" height="34"></img>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
-        aria-controls="offcanvas" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasLabel">Aperture</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav flex-grow-1 justify-content-between align-items-center ">
-            <li class="nav-item"><a class="nav-link" href="#">
-                <svg class="bi" width="24" height="24">
-                  <use xlink:href="#aperture"></use>
-                </svg>
-              </a></li>
-            <li class="nav-item "><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item "><a class="nav-link" href="#">Catálogo</a></li>
-            <div class="btn-group">
-              <button type="button" class="btn dropdown-toggle m-0" data-bs-toggle="dropdown" aria-expanded="false">
-                Categorias
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><button class="dropdown-item" type="button">Aniversários</button></li>
-                <li><button class="dropdown-item" type="button">Casamentos</button></li>
-                <li><button class="dropdown-item" type="button">Formatura</button></li>
-              </ul>
-            </div>
-            </li>
-            <li class="nav-item "><a class="nav-link" href="#">Dúdivdas</a></li>
-            <li class="nav-item "></li>
-          </ul>
+  <nav class="navbar navbar-expand-md bg-dark sticky-top pb-0 d-block" data-bs-theme="dark">
+    <a class="navbar-brand" href="#">
+      <img src="assets/logo.svg" class="bi" width="50" height="50"></img>
+    </a>
+  <div class="container">
+    <a class="navbar-brand-mobile" href="#">
+      <img src="assets/logo.svg" class="bi" width="50" height="50"></img>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+      aria-controls="offcanvas" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasLabel">Aperture</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav flex-grow-1 justify-content-between align-items-center ">
+          <!-- <li class="nav-item"><a class="nav-link" href="#">
+              <svg class="bi" width="24" height="24">
+                <use xlink:href="#aperture"></use>
+              </svg>
+            </a></li> -->
+          <li class="nav-item "><a class="nav-link" href="index.html">Home</a></li>
+          <!-- <li class="nav-item "><a class="nav-link" href="catalogo.html">Catálogo</a></li> -->
+          <div class="btn-group mobile">
+            <button type="button" class="btn dropdown-toggle m-0 w-100" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorias
+            </button>
+            
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><button class="dropdown-item" type="button" href="catalogo.html">Todos</button></li>
+              <li><button class="dropdown-item" type="button" href="catalogo.html?filter=Copo">Copos e Taças</button></li>
+              <li><button class="dropdown-item" type="button" href="catalogo.html?filter=Beleza">Beleza</button></li>
+              <li><button class="dropdown-item" type="button" href="catalogo.html?filter=Outros">Outros</button></li>
+            </ul>
+          </div>
+          <li class="nav-item desktop">      
+            <button class="nav-link" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" 
+            aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+              Categorias
+            </button>
+          </li>
+          <li class="nav-item "><a class="nav-link" href="#">Sobre</a></li>
+        </ul>
 
-        </div>
       </div>
     </div>
-  </nav>
-  <div class="col-12 d-flex align-items-center justify-content-center m-4">
-    <h5 class="text-uppercase text-primary mb-0 me-3">Tipos</h5>
-    <form id="filterForm" class="d-flex flex-wrap">
-      <!-- Aqui estão os checkboxes -->
-      <div class="form-check me-3">
-        <input class="form-check-input" type="checkbox" value="Todos" id="filterTodos" checked>
-        <label class="form-check-label" for="filterTodos">Todos</label>
-      </div>
-      <div class="form-check me-3">
-        <input class="form-check-input" type="checkbox" value="Copo" id="filterCopo">
-        <label class="form-check-label" for="filterCopo">Copo</label>
-      </div>
-      <div class="form-check me-3">
-        <input class="form-check-input" type="checkbox" value="Balde Acrílico" id="filterBalde">
-        <label class="form-check-label" for="filterBalde">Balde Acrílico</label>
-      </div>
-      <div class="form-check me-3">
-        <input class="form-check-input" type="checkbox" value="Caneca" id="filterCaneca">
-        <label class="form-check-label" for="filterCaneca">Caneca</label>
-      </div>
-      <div class="form-check me-3">
-        <input class="form-check-input" type="checkbox" value="Óculos" id="filterOculos">
-        <label class="form-check-label" for="filterOculos">Óculos</label>
-      </div>
-      <!-- Adicione outros checkboxes aqui -->
+  </div>
+  <div style="padding: 0 17px;"></div>
+</nav>
+<div class="collapse p-0" id="navbarToggleExternalContent" data-bs-theme="dark">
+  <div class="bg-dark p-0">
+    <!-- <h5 class="text-body-emphasis h4 w-50 ms-4">Collapsed content</h5> -->
+    <ul class="m-0">
+      <li class="nav-item d-flex"><a class="nav-link" href="catalogo.html" style="color:white;margin: 1% auto;">Todos</a></li>
+      <li class="nav-item d-flex"><a class="nav-link" href="catalogo.html?filter=Copo" style="color:white;margin: 1% auto;">Copos e Taças</a></li>
+      <li class="nav-item d-flex"><a class="nav-link" href="catalogo.html?filter=Beleza" style="color:white;margin: 1% auto;">Beleza</a></li>
+      <li class="nav-item d-flex"><a class="nav-link" href="catalogo.html?filter=Outros" style="color:white;margin: 1% auto;">Outros</a></li>
+    </ul>
+  </div>
+</div>  
+
+
+
+  <div class="col-12 d-block align-items-center justify-content-center mt-4 mb-4">
+    <h5 class="text-uppercase text-primary mb-0 me-3 text-center">Principais Categorias:</h5>
+    <form id="filterForm" class="d-flex flex-wrap justify-content-center mt-4">
+        <!-- Checkbox: Todos -->
+        <div class="form-check d-flex flex-wrap justify-content-center mt-4">
+            <input type="checkbox" class="btn-check form-check-input" value="Todos" id="filterTodos" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="filterTodos">Todos</label>
+        </div>
+        <!-- Checkbox: Copo -->
+        <div class="form-check d-flex flex-wrap justify-content-center mt-4">
+            <input type="checkbox" class="btn-check form-check-input" value="Copo" id="filterCopo" autocomplete="off">
+            <label class="btn btn-outline-primary" for="filterCopo">Copo</label>
+        </div>
+        <!-- Checkbox: Beleza -->
+        <div class="form-check d-flex flex-wrap justify-content-center mt-4">
+            <input type="checkbox" class="btn-check form-check-input" value="Beleza" id="filterBeleza" autocomplete="off">
+            <label class="btn btn-outline-primary" for="filterBeleza">Beleza</label>
+        </div>
+        <!-- Checkbox: Outros -->
+        <div class="form-check d-flex flex-wrap justify-content-center mt-4">
+            <input type="checkbox" class="btn-check form-check-input" value="Beleza" id="filterOutros" autocomplete="off">
+            <label class="btn btn-outline-primary" for="filterOutros">Outros</label>
+        </div>
     </form>
   </div>
 
 
+  <!-- <div class="col-12 d-block align-items-center justify-content-center mt-4 mb-4">
+    <form id="filterForm" class="d-flex flex-wrap justify-content-center mt-4" style="border-bottom: 1px solid #000;">
+        <div class="form-check div-btn-td">
+            <input type="checkbox" class="btn-check form-check-input" value="Todos" id="filterTodos" autocomplete="off" checked>
+            <label class="lb-btn" for="filterTodos">Todos</label>
+        </div>
+        <div class="form-check  div-btn">
+            <input type="checkbox" class="btn-check form-check-input" value="Copo" id="filterCopo" autocomplete="off">
+            <label class="lb-btn" for="filterCopo">Copo</label>
+        </div>
+        <div class="form-check  div-btn">
+            <input type="checkbox" class="btn-check form-check-input" value="Beleza" id="filterBeleza" autocomplete="off">
+            <label class="lb-btn" for="filterBeleza">Beleza</label>
+        </div>
+        <div class="form-check  div-btn">
+            <input type="checkbox" class="btn-check form-check-input" value="Beleza" id="filterOutros" autocomplete="off">
+            <label class="lb-btn" for="filterOutros">Outros</label>
+        </div>
+    </form>
+  </div> -->
 
-  <div style="height: 70vw;">
-    <div class="row row-cols-1 row-cols-md-6 mb-3 justify-content-center text-center" id="productList">
 
-      <div class="col m-2 product justify-content-center" data-category="Copo">
-        <div class="card" style="width: 18rem; height: 90%;">
-          <div style="overflow: hidden; height: 80%;">
-            <img src="assets/Copo.png" class="card-img-top" alt="...">
+  <div class="w-100">
+    <div class="row row-cols-1 row-cols-md-5 mb-3 justify-content-center text-center" id="productList">
+      <!-- Seus cards aqui -->
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/caneca-acrilico.png" class="card-img-top" alt="...">
           </div>
-          <div class="card-body p-0">
-            <h5 class="card-title">Copos</h5>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Canecas de Acrílico</h5>
             <ul class="list-unstyled mt-1">
-              <li>cores disponíveis*</li>
+              <li>Veja mais...</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="col m-2 product justify-content-center" data-category="Copo">
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
         <div class="card" style="width: 18rem; height: 90%;">
-          <div style="overflow: hidden; height: 80%;">
-            <img src="assets/Copo.png" class="card-img-top" alt="...">
-          </div>          
-          <div class="card-body p-0">
-            <h5 class="card-title">Copos</h5>
+          <div class="img-controle">
+            <img src="assets/prdt/caneca-chopp-cristal.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Canecas de Chopp Cristal</h5>
             <ul class="list-unstyled mt-1">
-              <li>cores disponíveis*</li>
+              <li>Veja mais...</li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col m-2 product justify-content-center" data-category="Copo">
-        <div class="card" style="width: 18rem; height: 90%;">
-          <div style="overflow: hidden; height: 80%;">
-            <img src="assets/Copo.png" class="card-img-top" alt="...">
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/caneca-chopp-jateado.png" class="card-img-top" alt="...">
           </div>
-          <div class="card-body p-0">
-            <h5 class="card-title">Copos</h5>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Canecas de Chopp Jateadas</h5>
             <ul class="list-unstyled mt-1">
-              <li>cores disponíveis*</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col m-2 product justify-content-center" data-category="Copo">
-        <div class="card" style="width: 18rem; height: 90%;">
-          <div style="overflow: hidden; height: 80%;">
-            <img src="assets/Copo.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body p-0">
-            <h5 class="card-title">Copos</h5>
-            <ul class="list-unstyled mt-1">
-              <li>cores disponíveis*</li>
+              <li>Veja mais...</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="col m-2 product justify-content-center" data-category="Óculos">
-        <div class="card" style="width: 18rem; height: 90%;">
-          <div style="overflow: hidden; height: 80%;">
-            <img src="assets/oculos.png" class="card-img-top" alt="...">
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/caneca-estampada.jpg" class="card-img-top" alt="...">
           </div>
-          <div class="card-body p-0">
-            <h5 class="card-title">Oculos</h5>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Canecas de Porcelana</h5>
             <ul class="list-unstyled mt-1">
-              <li>cores disponíveis*</li>
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card" style="width: 18rem; height: 90%;">
+          <div class="img-controle">
+            <img src="assets/prdt/caneca-vidro-fosco.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Canecas de Vidro Fosco</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/copo-shot.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Copos de Shot</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/long-drinks.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Copos Long Drinks</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/copo-stanley.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Copos Stanley</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/copo-twister-cristal-borda.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Copos Twister (Cristal com borda)</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/copo-twister-cristal.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Copos Twister (Cristal com tampa)</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/copo-twister-degrade.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Copos Twister (Degradê)</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/copo-twister-degrade-borda.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Copos Twister (Degradê com borda)</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/copo-twister-degrade-tampa.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Copos Twister (Degradê com tampa)</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/copo-twister-jateado.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Copos Twister (Jateado)</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/copo-twister-jateado-tampa.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Copos Twister (Jateado com Tampa)</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/copo-twister-liso-borda.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Copos Twister (Liso com borda)</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/copo-whisky.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Copos Whisky</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/copo-whisky-degrade.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Copos Whisky (Degradê)</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/Garrafas-Eco.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Garrafas Eco</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/mini-xicaras.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Mini Xícaras</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/taca-champagne.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Taças de Champagne</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/gin-bicolor.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Taças de Gin (bicolor)</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/gin-cristal-com-borda.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Taças de Gin Cristal (com borda)</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/gin-degrade.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Taças de Gin Degradê</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/gin-jateado.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Taças de Gin Jateadas</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/gin-lisa.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Taças de Gin Lisa</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/pentes-2.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Pentes</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/espelhos.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Espelhos</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/gloss.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Gloss</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/kit-pincel.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Kits de Pinceis</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/necessaire.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Necessaires</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/almofada.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Almofadas</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/azulejo.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Azulejos</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/chaveiro-acrilico.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Chaveiros Acrílico</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/chaveiro-mdf.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Chaveiros MDF</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/placa-spotify.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Placas Spotify</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/quadro.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Quadros A4</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/lata.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Tubos / Latas</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+        <div class="card">
+          <div class="img-controle">
+            <img src="assets/prdt/balas.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body pt-2">
+            <h5 class="card-title">Brindes em geral</h5>
+            <ul class="list-unstyled mt-1">
+              <li>Veja mais...</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="col m-2 product justify-content-center" data-category="Óculos">
-        <div class="card" style="width: 18rem; height: 90%;">
-          <div style="overflow: hidden; height: 80%;">
-            <img src="assets/oculos.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body p-0">
-            <h5 class="card-title">Oculos</h5>
-            <ul class="list-unstyled mt-1">
-              <li>cores disponíveis*</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col m-2 product justify-content-center" data-category="Óculos">
-        <div class="card" style="width: 18rem; height: 90%;">
-          <div style="overflow: hidden; height: 80%;">
-            <img src="assets/oculos.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body p-0">
-            <h5 class="card-title">Oculos</h5>
-            <ul class="list-unstyled mt-1">
-              <li>cores disponíveis*</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col m-2 product justify-content-center" data-category="Óculos">
-        <div class="card" style="width: 18rem; height: 90%;">
-          <div style="overflow: hidden; height: 80%;">
-            <img src="assets/oculos.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body p-0">
-            <h5 class="card-title">Oculos</h5>
-            <ul class="list-unstyled mt-1">
-              <li>cores disponíveis*</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      
     </div>
   </div>
 
   <div class="fixed-circle">
-    <a href="https://wa.me/5511943858290?text=Olá,%20gostaria%20de%20mais%20informações!" target="_blank">
+    <a href="https://wa.me/5511995292623?text=Olá,%20gostaria%20de%20mais%20informações!" target="_blank">
       <i class="bi bi-whatsapp fixed-icon"></i></a>
   </div>
 
@@ -342,7 +701,6 @@
           <h5>Links Úteis</h5>
           <ul class="list-unstyled">
             <li><a href="#" class="text-white-50 text-decoration-none">Home</a></li>
-            <li><a href="#" class="text-white-50 text-decoration-none">Sobre nós</a></li>
             <li><a href="#" class="text-white-50 text-decoration-none">Produtos</a></li>
           </ul>
         </div>
@@ -352,9 +710,11 @@
           <a href="#" class="text-white-50"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
         </div>
         <div class="col-12 col-md-4 text-end text-md-end text-center">
-          <h5>TeD Personalizações 2024.</h5>
-          <p>Todos os direitos reservados.</p>
-          <img src="assets/bgn-logo.png" class="bi mt-3" width="34" height="34"></img>
+          <div style="display: inline-block;">
+            <h5>TeD Personalizações 2024.</h5>
+            <p>Todos os direitos reservados.</p>
+          </div>
+          <img src="assets/logo.svg" class="bi mb-4 ms-4" width="40" height="40"></img>
         </div>
       </div>
     </div>
@@ -365,50 +725,66 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const allCheckbox = document.getElementById('filterTodos');
-      const otherCheckboxes = document.querySelectorAll('#filterForm .form-check-input:not(#filterTodos)');
+        const allCheckbox = document.getElementById('filterTodos');
+        const otherCheckboxes = document.querySelectorAll('#filterForm .form-check-input:not(#filterTodos)');
 
-      allCheckbox.addEventListener('change', function () {
-        if (allCheckbox.checked) {
-          otherCheckboxes.forEach((checkbox) => {
-            checkbox.checked = false;
-          });
-          filterProducts();
+        // Captura o parâmetro "filter" da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedFilter = urlParams.get('filter');
+
+        // Se existir um filtro na URL, marcar o checkbox correspondente
+        if (selectedFilter) {
+            const checkbox = document.querySelector(`input[value="${selectedFilter}"]`);
+            if (checkbox) {
+                checkbox.checked = true;
+                allCheckbox.checked = false; // Desmarcar "Todos" se um filtro específico estiver marcado
+            }
         }
-      });
 
-      otherCheckboxes.forEach((checkbox) => {
-        checkbox.addEventListener('change', function () {
-          if (checkbox.checked) {
-            allCheckbox.checked = false;
-          }
-
-          // Se nenhum outro checkbox estiver marcado, marca "Todos"
-          if (!Array.from(otherCheckboxes).some(ch => ch.checked)) {
-            allCheckbox.checked = true;
-          }
-          filterProducts();
+        // Adiciona listeners para a lógica de filtragem
+        allCheckbox.addEventListener('change', function () {
+            if (allCheckbox.checked) {
+                otherCheckboxes.forEach((checkbox) => {
+                    checkbox.checked = false;
+                });
+                filterProducts();
+            }
         });
-      });
 
-      function filterProducts() {
-        const selectedCategories = Array.from(document.querySelectorAll('#filterForm .form-check-input:checked'))
-          .map(input => input.value);
+        otherCheckboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', function () {
+                if (checkbox.checked) {
+                    allCheckbox.checked = false;
+                }
 
-        document.querySelectorAll('.col').forEach((product) => {
-          const productCategory = product.dataset.category;
-
-          if (selectedCategories.includes('Todos') || selectedCategories.includes(productCategory)) {
-            product.style.display = 'flex'; // Usar 'flex' para manter o layout Bootstrap
-          } else {
-            product.style.display = 'none';
-          }
+                // Se nenhum outro checkbox estiver marcado, marca "Todos"
+                if (!Array.from(otherCheckboxes).some(ch => ch.checked)) {
+                    allCheckbox.checked = true;
+                }
+                filterProducts();
+            });
         });
-      }
-      // Inicializar o filtro com "Todos" marcado
-      filterProducts();
+
+        function filterProducts() {
+            const selectedCategories = Array.from(document.querySelectorAll('#filterForm .form-check-input:checked'))
+                .map(input => input.value);
+
+            document.querySelectorAll('.col').forEach((product) => {
+                const productCategory = product.dataset.category;
+
+                if (selectedCategories.includes('Todos') || selectedCategories.includes(productCategory)) {
+                    product.style.display = 'flex'; // Usar 'flex' para manter o layout Bootstrap
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+
+        // Inicializar o filtro com base no estado atual
+        filterProducts();
     });
   </script>
+
 </body>
 
 </html>

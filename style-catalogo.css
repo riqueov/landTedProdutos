@@ -1,0 +1,181 @@
+body {
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    overflow-x: hidden;
+  }
+
+  .height-definido {
+    height: 90vw;
+  }
+
+  .mobile, .desktop {
+    display: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 14px;
+    /* Largura da barra de rolagem */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #414141 /* linear-gradient(180deg, #414141, #80F4FF);
+    border-radius: 10px; Bordas arredondadas do thumb */
+    /* border: 2px solid white; */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+      /* background: linear-gradient(180deg, #414141, #70D7E7); Gradiente mais escuro ao passar o mouse */
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+      /* background: linear-gradient(180deg, #414141, #5DBFC5); Gradiente ainda mais escuro ao clicar */
+  }
+
+  .custom-background {
+    background-image: url('assets/bg-n.svg');
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+}
+
+
+  .offcanvas-body {
+    padding-top: 20px;
+  }
+
+  .card {
+    width: 18rem; 
+    height: 90%;
+  }
+
+  .img-controle{
+    overflow: hidden; 
+    height: 310px;
+  }
+
+  .fixed-icon {
+    bottom: 20px;
+    /* Distância do canto inferior da tela */
+    font-size: 3rem;
+    /* Ajuste o tamanho do ícone conforme necessário */
+    color: #007bff;
+    /* Cor do ícone, ajuste conforme necessário */
+    z-index: 1000;
+    /* Garante que o ícone fique acima de outros elementos */
+  }
+
+  .fixed-circle {
+    position: fixed;
+    /* Fixa o círculo no canto da tela */
+    right: 20px;
+    /* Distância do canto direito da tela */
+    bottom: 20px;
+    /* Distância do canto inferior da tela */
+    width: 90px;
+    /* Largura do círculo */
+    height: 90px;
+    /* Altura do círculo */
+    background-color: #04c704;
+    /* Cor de fundo do círculo */
+    border-radius: 50%;
+    /* Torna o elemento circular */
+    display: flex;
+    /* Centraliza o ícone dentro do círculo */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    z-index: 1000;
+    /* Garante que o círculo fique acima de outros elementos */
+    transition: transform 0.3s ease;
+    /* Suaviza a transição de escala */
+  }
+
+  .fixed-circle i {
+    color: white;
+    /* Cor do ícone */
+    font-size: 2.8rem;
+    /* Tamanho do ícone */
+  }
+
+  .fixed-circle:hover {
+    transform: scale(1.2);
+    /* Aumenta o tamanho do círculo e do ícone ao passar o mouse */
+  }
+
+  /* .product{
+    width: 90%!important;
+  } */
+   .products-div{
+    width: 90%!important;
+  }
+  
+/* Exibe a div apenas em telas maiores (desktop) */
+@media only screen and (min-width: 768px) {
+  .navbar{
+      justify-content: center;
+      display: flex !important;
+      align-items: center;
+  }
+    .desktop {
+        display: block;
+    }
+    #productList{
+        width: 90%!important;
+        justify-content: center;
+        margin: auto!important;
+    }
+    .card-mob{
+        width: 90%;
+    }
+    .div-btn-td{
+        border-right: 2px solid #000;
+        border-top: 2px solid #000;
+        border-left: 2px solid #000;
+        border-bottom: 2px solid #fff;
+        margin-bottom: -2px;
+        padding: 2px 60px;
+        border-radius: 2px;
+        font-weight: 400;
+        margin-right: -0.4px;
+    
+    }
+    .div-btn{
+        border-right: 2px solid #000;
+        border-top: 2px solid #000;
+        border-left: 0px solid #000;
+        /* border-bottom: 2px solid #fff; */
+        margin-bottom: -2px;
+        padding: 2px 60px;
+        border-radius: 2px;
+        font-weight: 400;
+        margin-right: -0.4px;
+    }
+    .navbar-brand-mobile{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-brand{
+        display: none;
+    }
+  
+    .mobile {
+        display: block;
+    }
+
+    .card-mob{
+        width: 90%;
+    }
+
+    #filterForm {
+        margin-bottom: 20px;
+    }
+
+    #productList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}   
