@@ -101,6 +101,16 @@ body{
     transform: scale(1.2); /* Aumenta o tamanho do círculo e do ícone ao passar o mouse */
 }
 
+.carousel-control-prev-icon {
+    background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 fill%3D%22%23007bff%22 viewBox%3D%220 0 16 16%22%3E%3Cpath fill-rule%3D%22evenodd%22 d%3D%22M11.354 15.354a.5.5 0 0 0 0-.708L5.707 9l5.647-5.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 0 .708l6 6a.5.5 0 0 0 .708 0z%22/%3E%3C/svg%3E');
+    background-size: 100% 100%;
+  }
+  
+  /* Customizar o ícone da seta próxima (next) */
+  .carousel-control-next-icon {
+    background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 fill%3D%22%23007bff%22 viewBox%3D%220 0 16 16%22%3E%3Cpath fill-rule%3D%22evenodd%22 d%3D%22M4.646 15.354a.5.5 0 0 1 0-.708L10.293 9 4.646 3.354a.5.5 0 0 1 .708-.708l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708 0z%22/%3E%3C/svg%3E');
+    background-size: 100% 100%;
+  }
 /* Exibe a div apenas em telas maiores (desktop) */
 @media only screen and (min-width: 768px) {
 

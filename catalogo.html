@@ -4,10 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/collection/components/icon/icon.css">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/collection/components/icon/icon.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style-catalogo.css">
@@ -82,606 +80,723 @@
 </div>  
 
 
-
-  <div class="col-12 d-block align-items-center justify-content-center mt-4 mb-4">
-    <h5 class="text-uppercase text-primary mb-0 me-3 text-center">Principais Categorias:</h5>
-    <form id="filterForm" class="d-flex flex-wrap justify-content-center mt-4">
+  <div class="col-12 d-block mt-3">
+    <h5 id="titulo-categoria-mob" class="text-uppercase text-primary mb-0 me-3 text-center">Principais Categorias:</h5>
+    <form id="filterForm" class="d-flex align-items-center justify-content-center mt-2">
+        <h5 id="titulo-categoria" class="text-uppercase text-primary mb-0 text-center">Principais Categorias:</h5>
         <!-- Checkbox: Todos -->
-        <div class="form-check d-flex flex-wrap justify-content-center mt-4">
+        <div class="form-check d-flex justify-content-center p-2">
             <input type="checkbox" class="btn-check form-check-input" value="Todos" id="filterTodos" autocomplete="off" checked>
             <label class="btn btn-outline-primary" for="filterTodos">Todos</label>
         </div>
         <!-- Checkbox: Copo -->
-        <div class="form-check d-flex flex-wrap justify-content-center mt-4">
+        <div class="form-check d-flex justify-content-center p-2">
             <input type="checkbox" class="btn-check form-check-input" value="Copo" id="filterCopo" autocomplete="off">
             <label class="btn btn-outline-primary" for="filterCopo">Copo</label>
         </div>
         <!-- Checkbox: Beleza -->
-        <div class="form-check d-flex flex-wrap justify-content-center mt-4">
+        <div class="form-check d-flex justify-content-center p-2">
             <input type="checkbox" class="btn-check form-check-input" value="Beleza" id="filterBeleza" autocomplete="off">
             <label class="btn btn-outline-primary" for="filterBeleza">Beleza</label>
         </div>
         <!-- Checkbox: Outros -->
-        <div class="form-check d-flex flex-wrap justify-content-center mt-4">
+        <div class="form-check d-flex justify-content-center p-2">
             <input type="checkbox" class="btn-check form-check-input" value="Beleza" id="filterOutros" autocomplete="off">
             <label class="btn btn-outline-primary" for="filterOutros">Outros</label>
         </div>
     </form>
   </div>
+  <div class="d-flex justify-content-center mb-3" style="box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;">
+    <input type="text" id="searchBar" class="form-control" placeholder="Buscar produtos...">
+  </div>
 
-
-  <!-- <div class="col-12 d-block align-items-center justify-content-center mt-4 mb-4">
-    <form id="filterForm" class="d-flex flex-wrap justify-content-center mt-4" style="border-bottom: 1px solid #000;">
-        <div class="form-check div-btn-td">
-            <input type="checkbox" class="btn-check form-check-input" value="Todos" id="filterTodos" autocomplete="off" checked>
-            <label class="lb-btn" for="filterTodos">Todos</label>
-        </div>
-        <div class="form-check  div-btn">
-            <input type="checkbox" class="btn-check form-check-input" value="Copo" id="filterCopo" autocomplete="off">
-            <label class="lb-btn" for="filterCopo">Copo</label>
-        </div>
-        <div class="form-check  div-btn">
-            <input type="checkbox" class="btn-check form-check-input" value="Beleza" id="filterBeleza" autocomplete="off">
-            <label class="lb-btn" for="filterBeleza">Beleza</label>
-        </div>
-        <div class="form-check  div-btn">
-            <input type="checkbox" class="btn-check form-check-input" value="Beleza" id="filterOutros" autocomplete="off">
-            <label class="lb-btn" for="filterOutros">Outros</label>
-        </div>
-    </form>
-  </div> -->
-
-
-  <div class="w-100">
-    <div class="row row-cols-1 row-cols-md-5 mb-3 justify-content-center text-center" id="productList">
-      <!-- Seus cards aqui -->
-      
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+  <div class="w-100 mt-2 mb-5" style="min-height: 50.5vh!important;">
+    <div class="row row-cols-1 row-cols-md-5 mb-6" id="productList">
+      <!-- Card individual -->
+      <div class="col mt-2 mb-2 product" data-category="Copo">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/caneca-acrilico.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/caneca-acrilico.webp" class="card-img-top" alt="Caneca de Acrílico">
+            </div>
           </div>
-          <div class="card-body pt-2">
+          <div class="card-body p-0 pt-2">
             <h5 class="card-title">Canecas de Acrílico</h5>
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="caneca-acrilico" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/caneca-chopp-cristal.webp" class="card-img-top" alt="Caneca de Chopp de Cristal">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Canecas de Chopp Cristal</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="caneca-chopp-cristal" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
-        <div class="card" style="width: 18rem; height: 90%;">
-          <div class="img-controle">
-            <img src="assets/prdt/caneca-chopp-cristal.jpg" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Canecas de Chopp Cristal</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+      <div class="col mt-2 mb-2 product" data-category="Copo">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/caneca-chopp-jateado.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/caneca-chopp-jateado.webp" class="card-img-top" alt="Caneca de Chopp Jateado">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Canecas de Chopp Jateadas</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Canecas de Chopp Jateadas</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="caneca-chopp-jateado" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+      <div class="col mt-2 mb-2 product" data-category="Copo">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/caneca-estampada.jpg" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/caneca-estampada.webp" class="card-img-top" alt="Caneca de Porcelana">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Canecas de Porcelana</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Canecas de Porcelana</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="caneca-porcelana" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
-        <div class="card" style="width: 18rem; height: 90%;">
-          <div class="img-controle">
-            <img src="assets/prdt/caneca-vidro-fosco.jpg" class="card-img-top" alt="...">
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/caneca-vidro-fosco.webp" class="card-img-top" alt="Caneca de Vidro Fosco">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Canecas de Vidro Fosco</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Canecas de Vidro Fosco</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="caneca-vidro-fosco" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+      <div class="col mt-2 mb-2 product" data-category="Copo">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/copo-shot.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/copo-shot.webp" class="card-img-top" alt="Copo Shot">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Copos de Shot</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Copos de Shot</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="copo-shot" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+      <div class="col mt-2 mb-2 product" data-category="Copo">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/long-drinks.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/long-drinks.webp" class="card-img-top" alt="Long Drinks">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Copos Long Drinks</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Copos Long Drinks</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="caneca-acrilico" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+      <div class="col mt-2 mb-2 product" data-category="Copo">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/copo-stanley.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/copo-stanley.webp" class="card-img-top" alt="Copo Stanley">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Copos Stanley</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Copos Stanley</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="copo-stanley" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+      <div class="col mt-2 mb-2 product" data-category="Copo">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/copo-twister-cristal-borda.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/copo-twister-cristal-borda.webp" class="card-img-top" alt="Copo Twister Cristal com Borda">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Copos Twister (Cristal com borda)</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Copos Twister (Cristal com borda)</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="copo-twister-cristal-com-borda" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/copo-twister-cristal.webp" class="card-img-top" alt="Copo Twister Cristal Com Tampa">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Copos Twister (Cristal com tampa)</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="copo-twister-cristal-com-tampa" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/copo-twister-degrade.webp" class="card-img-top" alt="Copo Twister Cristal Degrade">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Copos Twister (Degradê)</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="copo-twister-degrade" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/copo-twister-degrade-borda.webp" class="card-img-top" alt="Copo Twister Degrade com Borda">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Copos Twister (Degradê com borda)</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="copo-twister-degrade-com-borda" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+            
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/copo-twister-degrade-tampa.webp" class="card-img-top" alt="Copo Twister Degrade com Tampa">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Copos Twister (Degradê com tampa)</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="copo-twister-degrade-com-tampa" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+         
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/copo-twister-jateado.webp"class="card-img-top" alt="Copo Twister Jateado">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Copos Twister (Jateado)</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="copo-twister-jateado" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/copo-twister-jateado-tampa.webp" class="card-img-top" alt="Copo Twister Jateado com Tampa">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Copos Twister (Jateado com Tampa)</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="copo-twister-jateado-com-tampa" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+     
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/copo-twister-liso-borda.webp" class="card-img-top" alt="Copo Twister Liso com Borda">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Copos Twister (Liso com borda)</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="copo-twister-liso-com-borda" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/copo-whisky.webp" class="card-img-top" alt="Copo Whisky">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Copos Whisky</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="copo-whisky" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/copo-whisky-degrade.webp" class="card-img-top" alt="Copo Whisky Degrade">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Copos Whisky (Degradê)</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="copo-whisky-degrade" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+            
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/Garrafas-Eco.webp" class="card-img-top" alt="Garrafas Eco">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Garrafas Eco</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="garrafas-eco" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/mini-xicaras.webp" class="card-img-top" alt="Mini Xicaras">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Mini Xícaras</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="mini-xicaras" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
   
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+      <div class="col mt-2 mb-2 product" data-category="Copo">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/copo-twister-cristal.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/taca-champagne.webp" class="card-img-top" alt="Taça Champagne">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Copos Twister (Cristal com tampa)</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Taças de Champagne</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="taca-champagne" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/gin-bicolor.webp" class="card-img-top" alt="Taça Champagne">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Taças de Gin (bicolor)</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="gin-bicolor" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/gin-cristal-com-borda.webp" class="card-img-top" alt="Taça Gin Cristal com borda">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Taças de Gin Cristal (com borda)</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="gin-cristal-com-borda" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/gin-degrade.webp" class="card-img-top" alt="Taça Gin Cristal Degrade">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Taças de Gin Degradê</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="gin-degrade" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mt-2 mb-2 product" data-category="Copo">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/gin-jateado.webp" class="card-img-top" alt="Taça de Gin Jateada">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Taças de Gin Jateadas</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="gin-jateado" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+      <div class="col mt-2 mb-2 product" data-category="Copo">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/copo-twister-degrade.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/gin-lisa.webp" class="card-img-top" alt="Taça Gin Lisa">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Copos Twister (Degradê)</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Taças de Gin Lisa</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="gin-lisa" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+      <div class="col mt-2 mb-2 product" data-category="Beleza">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/copo-twister-degrade-borda.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/pentes-2.webp" class="card-img-top" alt="Escova">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Copos Twister (Degradê com borda)</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Escovas</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="escovas" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+      <div class="col mt-2 mb-2 product" data-category="Beleza">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/copo-twister-degrade-tampa.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/espelhos.webp" class="card-img-top" alt="Espelhos">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Copos Twister (Degradê com tampa)</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Espelhos</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="espelhos" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        
+      <div class="col mt-2 mb-2 product" data-category="Beleza">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/gloss.webp" class="card-img-top" alt="gloss">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Gloss</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="gloss" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+       
+      <div class="col mt-2 mb-2 product" data-category="Beleza">
+        <div class="card">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/kit-pincel.webp" class="card-img-top" alt="gloss">
+            </div>
+          </div>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Kits de Pinceis</h5> 
+          </div>
+          <div class="footer-card">
+            <ul class="list-unstyled mt-1">
+              <li><a href="#" class="view-more" data-product="gloss" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+      <div class="col mt-2 mb-2 product" data-category="Beleza">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/copo-twister-jateado.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/necessaire.webp" class="card-img-top" alt="gloss">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Copos Twister (Jateado)</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Necessaires</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/copo-twister-jateado-tampa.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Copos Twister (Jateado com Tampa)</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/copo-twister-liso-borda.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Copos Twister (Liso com borda)</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="necessaire" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+      <div class="col mt-2 mb-2 product" data-category="Outros">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/copo-whisky.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/almofada.webp" class="card-img-top" alt="almofada">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Copos Whisky</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Almofada</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="almofada" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
+      <div class="col mt-2 mb-2 product" data-category="Outros">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/copo-whisky-degrade.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/azulejo.webp" class="card-img-top" alt="azulejo">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Copos Whisky (Degradê)</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Azulejos</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/Garrafas-Eco.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Garrafas Eco</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/mini-xicaras.jpg" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Mini Xícaras</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/taca-champagne.jpg" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Taças de Champagne</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/gin-bicolor.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Taças de Gin (bicolor)</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/gin-cristal-com-borda.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Taças de Gin Cristal (com borda)</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/gin-degrade.jpg" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Taças de Gin Degradê</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/gin-jateado.jpg" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Taças de Gin Jateadas</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Copo">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/gin-lisa.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Taças de Gin Lisa</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/pentes-2.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Pentes</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/espelhos.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Espelhos</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/gloss.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Gloss</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/kit-pincel.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Kits de Pinceis</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="azulejo" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+      <div class="col mt-2 mb-2 product" data-category="Outros">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/necessaire.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/chaveiro-acrilico.webp" class="card-img-top" alt="Chaveiro Acrílico">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Necessaires</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Chaveiros Acrílicos</h5>
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="chaveiro-acrilico" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+      <div class="col mt-2 mb-2 product" data-category="Outros">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/almofada.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/chaveiro-mdf.webp" class="card-img-top" alt="Chaveiro MDF">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Almofadas</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/azulejo.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Azulejos</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/chaveiro-acrilico.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Chaveiros Acrílico</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/chaveiro-mdf.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
+          <div class="card-body p-0 pt-2">
             <h5 class="card-title">Chaveiros MDF</h5>
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="chaveiro-mdf" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+      <div class="col mt-2 mb-2 product" data-category="Outros">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/placa-spotify.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/quadro.webp" class="card-img-top" alt="Quadro">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Placas Spotify</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Quadros A4</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="quadro" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+      <div class="col mt-2 mb-2 product" data-category="Outros">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/quadro.png" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/lata.webp" class="card-img-top" alt="lata">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Quadros A4</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Tubos / Latas</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="lata" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
+      <div class="col mt-2 mb-2 product" data-category="Outros">
         <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/lata.jpg" class="card-img-top" alt="...">
+          <div class="header-card">
+            <div class="div-img">
+              <img src="assets/prdt/balas.webp" class="card-img-top" alt="brindes">
+            </div>
           </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Tubos / Latas</h5>
+          <div class="card-body p-0 pt-2">
+            <h5 class="card-title">Brindes em geral</h5> 
+          </div>
+          <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
+              <li><a href="#" class="view-more" data-product="brindes" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <div class="col mt-2 mb-2 p-0 ms-auto me-auto product justify-content-center" class="card-mob" data-category="Beleza">
-        <div class="card">
-          <div class="img-controle">
-            <img src="assets/prdt/balas.jpg" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body pt-2">
-            <h5 class="card-title">Brindes em geral</h5>
-            <ul class="list-unstyled mt-1">
-              <li>Veja mais...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 
@@ -693,8 +808,23 @@
 
   <div class="product-device shadow-sm d-none d-md-block"></div>
   <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  
+  <div class="position-relative overflow-hidden p-md-2 text-center w-100" style="background-color: #212529fa; color: #c3c6c9;">
+    <div class="col-md-8 p-lg-5 mx-auto my-3">
+      <h3 class="display-3 fw-bold mb-4">Sobre Nós</h3>
+      <h5 style="display: flex; text-align: start; width: 90%; margin: 3% auto;">
+        A *Ted Personalização* foi fundada em 2023 por Diego e Thaís, com o objetivo de transformar brindes em experiências marcantes para clientes de todos os ramos. 
+        Movidos pelo amor ao que fazem, eles dedicam-se a criar itens personalizados com atenção aos detalhes, ajudando empresas a fortalecer suas marcas.
+      </h5>
+      <h5 style="display: flex; text-align: start; width: 90%; margin: 3% auto;">
+        Cada produto é pensado com atenção aos detalhes, oferecendo soluções personalizadas que refletem o estilo e a identidade de cada cliente. 
+        O compromisso da Ted é transformar um simples brinde em uma experiência inesquecível, com o carinho que só quem ama o que faz pode entregar.
+      </h5>
+    </div>
+  </div>
+
   <!-- </div> -->
-  <footer class="d-flex flex-column align-items-center py-5 bg-dark border-top text-white-50" data-bs-theme="dark">
+  <footer class="d-flex flex-column align-items-center py-5 bg-dark border-top text-white-50" style="color: #c3c6c9!important;" data-bs-theme="dark">
     <div class="container text-center">
       <div class="w-100 row gy-4 justify-content-between justify-content-md-start">
         <div class="col-12 col-md-4 text-start text-md-start text-center">
@@ -721,12 +851,42 @@
   </footer>
   
 
+  <!-- Modal -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModalLabel">Detalhes do Produto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Carousel -->
+          <div id="productCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner" id="carouselItems">
+              <!-- Imagens do carrossel serão inseridas aqui -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="row mt-3" id="thumbnailsContainer"></div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
         const allCheckbox = document.getElementById('filterTodos');
         const otherCheckboxes = document.querySelectorAll('#filterForm .form-check-input:not(#filterTodos)');
+        const searchBar = document.getElementById('searchBar');
 
         // Captura o parâmetro "filter" da URL
         const urlParams = new URLSearchParams(window.location.search);
@@ -765,23 +925,129 @@
             });
         });
 
+        searchBar.addEventListener('input', filterProducts);
         function filterProducts() {
-            const selectedCategories = Array.from(document.querySelectorAll('#filterForm .form-check-input:checked'))
-                .map(input => input.value);
+          const selectedCategories = Array.from(document.querySelectorAll('#filterForm .form-check-input:checked'))
+            .map(input => input.value.toLowerCase());
+          
+          const searchTerm = searchBar.value.toLowerCase(); // Valor da barra de busca
 
-            document.querySelectorAll('.col').forEach((product) => {
-                const productCategory = product.dataset.category;
+          document.querySelectorAll('.col').forEach((product) => {
+            const productCategory = product.dataset.category.toLowerCase();
+            const productTitle = product.querySelector('.card-title').textContent.toLowerCase();
 
-                if (selectedCategories.includes('Todos') || selectedCategories.includes(productCategory)) {
-                    product.style.display = 'flex'; // Usar 'flex' para manter o layout Bootstrap
-                } else {
-                    product.style.display = 'none';
-                }
-            });
+            // Verifica se o produto corresponde ao termo de busca e à categoria selecionada
+            const matchesSearch = productTitle.includes(searchTerm);
+            const matchesCategory = selectedCategories.includes('todos') || selectedCategories.includes(productCategory);
+
+            if (matchesSearch && matchesCategory) {
+              product.style.display = 'flex'; // Usar 'flex' para manter o layout Bootstrap
+            } else {
+              product.style.display = 'none';
+            }
+          });
         }
 
         // Inicializar o filtro com base no estado atual
         filterProducts();
+    });
+    
+    const productImagesCount = {
+      'almofada':                 9,
+      'azulejo':                  15,
+      'brindes':                  3,
+      'caneca-acrilico':          3,
+      'caneca-chopp-cristal':     22,       
+      'caneca-chopp-jateado':     3,
+      'caneca-porcelana':         26,
+      'caneca-vidro-fosco':       12, 
+      'chaveiro-acrilico':        20,
+      'chaveiro-mdf':             26,
+      'copo-shot':                4, 
+      'copo-stanley':             7,
+      'copo-twister-cristal-com-borda': 2, 
+      'copo-twister-cristal-com-tampa': 6, 
+      'copo-twister-degrade':           2, 
+      'copo-twister-degrade-com-borda': 2, 
+      'copo-twister-degrade-com-tampa': 2,  
+      'copo-twister-jateado':           2, 
+      'copo-twister-jateado-com-tampa': 1, 
+      'copo-twister-liso-com-borda':    3, 
+      'copo-whisky':            2, 
+      'copo-whisky-degrade':    3, 
+      'escovas':          8,
+      'espelhos':         11,
+      'long-drinks':      41,
+      'garrafas-eco':     46, 
+      'gloss':          3,
+      'kit-pincel':     42,
+      'taca-champagne': 9, 
+      'gin-bicolor':    1, 
+      'gin-cristal-com-borda': 9, 
+      'gin-degrade':  25, 
+      'gin-jateado':  43, 
+      'gin-lisa':     12,
+      'necessaire':   6,
+      'quadro':       6,
+      'lata':         10,
+    };
+  
+    document.querySelectorAll('.view-more').forEach(item => {
+      item.addEventListener('click', function() {
+        const product = this.getAttribute('data-product');
+        const modalLabel = document.getElementById('productModalLabel');
+        const carouselItems = document.getElementById('carouselItems');
+        const thumbnailsContainer = document.getElementById('thumbnailsContainer');
+        const productCarousel = new bootstrap.Carousel(document.getElementById('productCarousel'));
+  
+        const prodFormat = product.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+        // Atualiza o título do modal
+        modalLabel.textContent = prodFormat;
+  
+        // Limpa os itens anteriores do carrossel e miniaturas
+        carouselItems.innerHTML = '';
+        thumbnailsContainer.innerHTML = '';
+  
+        // Pega o número de imagens para o produto
+        const imageCount = productImagesCount[product] || 0;
+  
+        if (imageCount > 0) {
+          // Gera a lista de imagens dinamicamente
+          const images = [];
+          for (let i = 1; i <= imageCount; i++) {
+            images.push(`assets/prdt/list/${product}/${i}.webp`);
+          }
+  
+          // Insere as imagens no carrossel
+          images.forEach((imgSrc, index) => {
+            const isActive = index === 0 ? 'active' : '';
+            const carouselItem = `
+              <div class="carousel-item ${isActive}">
+                <img src="${imgSrc}" class="d-block w-100" alt="Imagem ${index + 1}">
+              </div>
+            `;
+            carouselItems.insertAdjacentHTML('beforeend', carouselItem);
+  
+            // Gera as miniaturas e adiciona a funcionalidade de clicar para mudar no carrossel
+            const thumbnailItem = `
+              <div class="col-2">
+                <img src="${imgSrc}" class="img-thumbnail" alt="Miniatura ${index + 1}" style="cursor: pointer;" data-index="${index}">
+              </div>
+            `;
+            thumbnailsContainer.insertAdjacentHTML('beforeend', thumbnailItem);
+          });
+  
+          // Adiciona o evento de clique às miniaturas
+          document.querySelectorAll('#thumbnailsContainer img').forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', function() {
+              productCarousel.to(index); // Vai para o slide correspondente
+            });
+          });
+  
+        } else {
+          carouselItems.innerHTML = '<p>Nenhuma imagem disponível.</p>';
+        }
+      });
     });
   </script>
 
