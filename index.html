@@ -19,11 +19,11 @@
 
   <nav class="navbar navbar-expand-md bg-dark sticky-top pb-0 d-block" data-bs-theme="dark">
       <a class="navbar-brand" href="#">
-        <img src="assets/logo.svg" class="bi" width="50" height="50"></img>
+        <img src="assets/Logo.svg" class="bi" width="50" height="50"></img>
       </a>
-    <div class="container">
-      <a class="navbar-brand-mobile" href="#">
-        <img src="assets/logo.svg" class="bi" width="50" height="50"></img>
+    <div class="container-menu">
+      <a class="navbar-brand-mobile" href="/">
+        <img src="assets/Logo.svg" class="bi" width="50" height="50"></img>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
         aria-controls="offcanvas" aria-label="Toggle navigation">
@@ -31,7 +31,11 @@
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasLabel">Aperture</h5>
+          <span>
+            <a class="navbar-brand-mobile" href="/">
+              <img src="assets/Logo.svg" class="bi" width="50" height="50"></img>
+            </a>
+          </span>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -142,8 +146,8 @@
     </div>
 
 
-    <div style="display: flex; margin-top: 5%;">
-      <div id="carouselExampleInterval" class="carousel slide" style="width: 50%;" data-bs-ride="carousel">
+    <div class="image-div-slide">
+      <div id="carouselExampleInterval" class="carousel slide imagens-slide" style="width: 50%; margin: auto;" data-bs-ride="carousel">
         <div class="carousel-inner img-carrocel">
           <div class="carousel-item" data-bs-interval="10000">
             <img src="assets/kit.png" style="width: 900px; position: relative; zoom: 0.83; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);" alt="...">
@@ -160,12 +164,11 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div>
-      
+      </div>      
 
       <div class="div-conteudo">
         <div class="sub-titulo">
-          <h3>Sucesso de vendas - Brindes de beleza</h3>  
+          <h3 class="titulo-sucesso">Sucesso de vendas - Brindes de beleza</h3>  
           <h5>Temos uma variedade enorme e muitas opções de personalização</h5>
           <div class="texto-conteudo">
             <a href="https://wa.me/5511995292623?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20brindes%20de%20beleza!" 
@@ -175,7 +178,25 @@
             class="text-decoration-none"><h5>Conheça todos os produtos.</h5></a>
           </div>
         </div>
+      </div>
 
+      <div id="carouselExampleInterval3" class="carousel slide imagens-slide-mob" data-bs-ride="carousel">
+        <div class="carousel-inner img-carrocel">
+          <div class="carousel-item" data-bs-interval="10000">
+            <img src="assets/kit.png" style="width: 900px; position: relative; zoom: 0.83; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);" alt="...">
+          </div>
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img src="assets/pentes.png" style="width: 900px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval3" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval3" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
 
     </div>
@@ -184,7 +205,7 @@
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
   </div>
 
-  <div id="carouselExampleInterval2" class="carousel slide" data-bs-ride="carousel" style="width: 50%; margin: auto; ">
+  <div id="carouselExampleInterval2" class="carousel slide" style="width: 50%; margin: auto;" data-bs-ride="carousel">
     <div class="carousel-inner aval-carrocel">
       <h2 style="text-align: center; background-color: #f8f9fa; margin: 0; padding-bottom: 10px;">Feedback dos Nossos Clientes</h2>
 
@@ -268,11 +289,11 @@
   <div class="position-relative overflow-hidden p-md-2 text-center w-100" style="background-color: #212529fa; color: #c3c6c9;">
     <div class="col-md-8 p-lg-5 mx-auto my-3">
       <h3 class="display-3 fw-bold mb-4">Sobre Nós</h3>
-      <h5 style="display: flex; text-align: start; width: 90%; margin: 3% auto;">
+      <h5 class="text-about">
         A *Ted Personalização* foi fundada em 2023 por Diego e Thaís, com o objetivo de transformar brindes em experiências marcantes para clientes de todos os ramos. 
         Movidos pelo amor ao que fazem, eles dedicam-se a criar itens personalizados com atenção aos detalhes, ajudando empresas a fortalecer suas marcas.
       </h5>
-      <h5 style="display: flex; text-align: start; width: 90%; margin: 3% auto;">
+      <h5 class="text-about">
         Cada produto é pensado com atenção aos detalhes, oferecendo soluções personalizadas que refletem o estilo e a identidade de cada cliente. 
         O compromisso da Ted é transformar um simples brinde em uma experiência inesquecível, com o carinho que só quem ama o que faz pode entregar.
       </h5>
@@ -285,8 +306,8 @@
         <div class="col-12 col-md-4 text-start text-md-start text-center">
           <h5>Links Úteis</h5>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-white-50 text-decoration-none">Home</a></li>
-            <li><a href="#" class="text-white-50 text-decoration-none">Produtos</a></li>
+            <li><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+            <li><a href="catalogo.html" class="text-white-50 text-decoration-none">Produtos</a></li>
           </ul>
         </div>
         <div class="col-12 col-md-4 text-center">
@@ -299,7 +320,7 @@
             <h5>TeD Personalizações 2024.</h5>
             <p>Todos os direitos reservados.</p>
           </div>
-          <img src="assets/logo.svg" class="bi mb-4 ms-4" width="40" height="40"></img>
+          <img src="assets/Logo.svg" class="bi mb-4 ms-4" width="40" height="40"></img>
         </div>
       </div>
     </div>
