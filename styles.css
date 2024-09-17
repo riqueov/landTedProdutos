@@ -66,9 +66,6 @@ body{
     font-size: 3rem; /* Ajusta o tamanho do ícone conforme necessário */
 }
 
-.btn {
-    margin-top: 1rem; /* Ajusta a margem superior do botão */
-}
 
 .fixed-icon {
     bottom: 20px; /* Distância do canto inferior da tela */
@@ -193,6 +190,11 @@ body{
     .imagens-slide-mob{
         display: none!important;
     }
+
+    .sobre{
+        background-color: #212529fa;
+        color: #c3c6c9;
+    }
     
 }
 @media (max-width: 768px) {
@@ -301,4 +303,9 @@ body{
         margin-bottom: 20px;
     }
 
+    .sobre{
+        background-color: #212529fa;
+        color: #c3c6c9;
+        padding: 25px 5px;
+    }
 }  

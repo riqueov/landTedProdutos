@@ -268,50 +268,55 @@ body {
   }
 
   #productList {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
   }
-  
+
+  .product{
+    height: 40vh;  
+  }
+
   .container-menu{
     display: flex;
     justify-content: space-between;
     margin: 0 !important;
     padding: 0.5rem;
-}
+  }
 
-.container{
+  .container{
     margin: 1rem auto!important;
-}
+  }
 
-.container-infos{
+  .container-infos{
     margin: 4rem auto;
-}
+  }
 
-.card{
+  .card{
     height: 10rem!important;
-}
+  }
 
-.btn {
+  .btn-mn {
     color: #adb5bd!important;
     font-size: 22px!important;
     border: none;
-}
-.nav-link {
+    background: none;
+  }
+  .nav-link {
     color: #adb5bd!important;
     font-size: 22px!important;
     margin: 1rem auto!important;
-}
+  }
 
-.dropdown-menu{
+  .dropdown-menu{
     color: #adb5bd!important;
     font-size: 19px!important;
     border:none!important;
     text-align: center!important;
-}
+  }
 
-.dropdown-item{
+  .dropdown-item{
     margin: 1rem auto!important;
-}
+  }
 }   
