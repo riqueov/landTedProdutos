@@ -6,12 +6,23 @@ body{
     background-color: #f8f9fa;
 }
 
+.img-principal{
+    display: flex; 
+    left: 0; 
+    top: 0; 
+    position: absolute; 
+    margin: 0.3% 0 0 1%;
+}
+.div-menu{
+  width: 70%;
+}
+
 .mobile, .desktop {
     display: none;
 }
   
 .custom-background {
-    background-image: url('assets/bg-n.svg');
+    background-image: url('assets/bg-n 1.png');
     background-size: cover; /* Faz a imagem cobrir todo o fundo */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Impede que a imagem se repita */
@@ -116,6 +127,10 @@ body{
         display: flex !important;
         align-items: center;
     }
+
+    .container-menu{
+        width: 100%;
+    }
     .desktop {
         display: block;
     }
@@ -125,19 +140,28 @@ body{
     }
     .div-conteudo{
         display: flex;
-        width: 50%;
+        width: 85%;
         align-items: center;
         justify-content: center;
     }    
     
+    .titulo-sucesso{
+        text-align: start;
+    }
+
+    .sub-titulo-conteudo{
+        text-align: start;
+    }
+
     .texto-conteudo{
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-top: 90px;
-        width: 70%;
-        margin: 90px auto;
+        width: 90%;
+        margin: 165px 0;
     }    
+
     .sub-titulo{
         display: inline-block;
         width: 100%;
@@ -185,6 +209,15 @@ body{
     .image-div-slide{
         display: flex;
         margin-top: 5%;
+        justify-content: center;
+    }
+
+    .imagens-slide{       
+        width: 90%; 
+        margin: auto; 
+        background: #181818;    
+        box-shadow: rgba(208, 236, 238, 0.4) 5px 5px, rgba(208, 236, 238, 0.3) 10px 10px, rgba(208, 236, 238, 0.2) 15px 15px, 
+        rgba(208, 236, 238, 0.1) 20px 20px, rgba(208, 236, 238, 0.05) 25px 25px;
     }
 
     .imagens-slide-mob{
@@ -198,6 +231,19 @@ body{
     
 }
 @media (max-width: 768px) {
+    .img-principal{
+        display: none!important;
+    }
+    .div-menu{
+      width: 100%;
+    }
+    .container-menu{
+        width: 100%!important;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 !important;
+        padding: 0.5rem;
+    }
     .navbar-brand{
         display: none;
     }
@@ -224,12 +270,6 @@ body{
         text-align: center;
         width: 80%;
         margin: 20px auto 4rem;
-    }
-    .container-menu{
-        display: flex;
-        justify-content: space-between;
-        margin: 0 !important;
-        padding: 0.5rem;
     }
 
     .container{
@@ -308,4 +348,5 @@ body{
         color: #c3c6c9;
         padding: 25px 5px;
     }
+
 }  

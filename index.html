@@ -17,73 +17,73 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-md bg-dark sticky-top pb-0 d-block" data-bs-theme="dark">
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/Logo.svg" class="bi" width="50" height="50"></img>
-      </a>
-    <div class="container-menu">
-      <a class="navbar-brand-mobile" href="index.html">
-        <img src="assets/Logo.svg" class="bi" width="50" height="50"></img>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
-        aria-controls="offcanvas" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-        <div class="offcanvas-header">
-          <span>
-            <a class="navbar-brand-mobile" href="index.html">
-              <img src="assets/Logo.svg" class="bi" width="50" height="50"></img>
-            </a>
-          </span>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav flex-grow-1 justify-content-between align-items-center ">
-            <!-- <li class="nav-item"><a class="nav-link" href="#">
-                <svg class="bi" width="24" height="24">
-                  <use xlink:href="#aperture"></use>
-                </svg>
-              </a></li> -->
-            <li class="nav-item "><a class="nav-link" href="index.html">Home</a></li>
-            <!-- <li class="nav-item "><a class="nav-link" href="catalogo.html">Catálogo</a></li> -->
-            <div class="btn-group mobile">
-              <button type="button" class="btn dropdown-toggle m-0 w-100" data-bs-toggle="dropdown" aria-expanded="false">
-                Categorias
-              </button>
-              
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><button class="dropdown-item" type="button" href="catalogo.html">Todos</button></li>
-                <li><button class="dropdown-item" type="button" href="catalogo.html?filter=Copo">Copos e Taças</button></li>
-                <li><button class="dropdown-item" type="button" href="catalogo.html?filter=Beleza">Beleza</button></li>
-                <li><button class="dropdown-item" type="button" href="catalogo.html?filter=Outros">Outros</button></li>
+  <nav class="navbar navbar-expand-md bg-dark sticky-top p-3 d-block" data-bs-theme="dark">
+    <a class="navbar-brand" href="index.html" class="img-principal">
+      <img src="assets/Logo.svg" class="bi" width="50" height="50"></img>
+    </a>
+    <div class="div-menu">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="container-menu">
+          <a class="navbar-brand-mobile" href="index.html">
+            <img src="assets/Logo.svg" class="bi" width="50" height="50"></img>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+            aria-controls="offcanvas" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+            <div class="offcanvas-header">
+              <span>
+                <a class="navbar-brand-mobile" href="index.html">
+                  <img src="assets/Logo.svg" class="bi" width="50" height="50"></img>
+                </a>
+              </span>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav flex-grow-1 justify-content-between align-items-center">
+                <li class="nav-item "><a class="nav-link" href="index.html">Home</a></li>
+                <div class="btn-group mobile">
+                  <button type="button" class="btn dropdown-toggle m-0 w-100" data-bs-toggle="dropdown" aria-expanded="false">
+                    Categorias
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="catalogo.html">Todos</a></li>
+                    <li><a class="dropdown-item" href="catalogo.html?filter=Copo">Copos e Taças</a></li>
+                    <li><a class="dropdown-item" href="catalogo.html?filter=Beleza">Beleza</a></li>
+                    <li><a class="dropdown-item" href="catalogo.html?filter=Outros">Outros</a></li>
+                  </ul>
+                </div>
+                <li class="nav-item desktop">
+                  <button class="nav-link" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+                    aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    Categorias
+                  </button>
+                </li>
+                <li class="nav-item "><a class="nav-link" href="#sobre">Sobre</a></li>
               </ul>
             </div>
-            <li class="nav-item desktop">      
-              <button class="nav-link" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" 
-              aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                Categorias
-              </button>
-            </li>
-            <li class="nav-item "><a class="nav-link" href="#">Sobre</a></li>
-          </ul>
-
+          </div>
         </div>
       </div>
+
+      <div class="collapse w-100" id="navbarToggleExternalContent" data-bs-theme="dark">
+        <div class="bg-dark p-3">
+          <ul class="m-0 text-center p-0">
+            <li class="nav-item d-flex justify-content-center"><a class="nav-link" href="catalogo.html"
+                style="color:white;margin: 1% auto;">Todos</a></li>
+            <li class="nav-item d-flex justify-content-center"><a class="nav-link" href="catalogo.html?filter=Copo"
+                style="color:white;margin: 1% auto;">Copos e Taças</a></li>
+            <li class="nav-item d-flex justify-content-center"><a class="nav-link" href="catalogo.html?filter=Beleza"
+                style="color:white;margin: 1% auto;">Beleza</a></li>
+            <li class="nav-item d-flex justify-content-center"><a class="nav-link" href="catalogo.html?filter=Outros"
+                style="color:white;margin: 1% auto;">Outros</a></li>
+          </ul>
+        </div>
     </div>
-    <div style="padding: 0 17px;"></div>
   </nav>
-  <div class="collapse p-0" id="navbarToggleExternalContent" data-bs-theme="dark">
-    <div class="bg-dark p-0">
-      <!-- <h5 class="text-body-emphasis h4 w-50 ms-4">Collapsed content</h5> -->
-      <ul class="m-0">
-        <li class="nav-item d-flex"><a class="nav-link" href="catalogo.html" style="color:white;margin: 1% auto;">Todos</a></li>
-        <li class="nav-item d-flex"><a class="nav-link" href="catalogo.html?filter=Copo" style="color:white;margin: 1% auto;">Copos e Taças</a></li>
-        <li class="nav-item d-flex"><a class="nav-link" href="catalogo.html?filter=Beleza" style="color:white;margin: 1% auto;">Beleza</a></li>
-        <li class="nav-item d-flex"><a class="nav-link" href="catalogo.html?filter=Outros" style="color:white;margin: 1% auto;">Outros</a></li>
-      </ul>
-    </div>
-  </div>  
+  
+  
 
   
   <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-body-tertiary custom-background">
@@ -147,29 +147,10 @@
 
 
     <div class="image-div-slide">
-      <div id="carouselExampleInterval" class="carousel slide imagens-slide" style="width: 50%; margin: auto;" data-bs-ride="carousel">
-        <div class="carousel-inner img-carrocel">
-          <div class="carousel-item" data-bs-interval="10000">
-            <img src="assets/kit.png" style="width: 900px; position: relative; zoom: 0.83; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);" alt="...">
-          </div>
-          <div class="carousel-item active" data-bs-interval="2000">
-            <img src="assets/pentes.png" style="width: 900px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>      
-
       <div class="div-conteudo">
         <div class="sub-titulo">
-          <h3 class="titulo-sucesso">Sucesso de vendas - Brindes de beleza</h3>  
-          <h5>Temos uma variedade enorme e muitas opções de personalização</h5>
+          <h1 class="titulo-sucesso">Sucesso de vendas - Brindes de beleza</h1>  
+          <h4 class="sub-titulo-conteudo">Temos uma variedade enorme e muitas opções de personalização</h4>
           <div class="texto-conteudo">
             <a href="https://wa.me/5511995292623?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20brindes%20de%20beleza!" 
             class="text-decoration-none"
@@ -178,6 +159,29 @@
             class="text-decoration-none"><h5>Conheça todos os produtos.</h5></a>
           </div>
         </div>
+          
+        <div id="carouselExampleInterval" class="carousel slide imagens-slide">
+          <div class="carousel-inner img-carrocel">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <video id="meuVideo" style="width: 285px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);" alt="..." muted loop>
+                <source src="assets/beleza.mp4" type="video/mp4">
+                Seu navegador não oferece suporte vídeos, se possível.
+              </video>
+            </div>
+            <div class="carousel-item" data-bs-interval="20000">
+              <img src="assets/kit.png" style="width: 910px; position: relative; zoom: 0.83; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);" alt="...">
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>   
+        </div>   
       </div>
 
       <div id="carouselExampleInterval3" class="carousel slide imagens-slide-mob" data-bs-ride="carousel">
@@ -286,7 +290,7 @@
   </div>
 
 
-  <div class="position-relative overflow-hidden p-md-2 text-center w-100 sobre">
+  <div class="position-relative overflow-hidden p-md-2 text-center w-100 sobre" id="sobre">
     <div class="col-md-8 p-lg-5 mx-auto my-3">
       <h3 class="display-3 fw-bold mb-4">Sobre Nós</h3>
       <h5 class="text-about">
@@ -320,7 +324,7 @@
             <h5>TeD Personalizações 2024.</h5>
             <p>Todos os direitos reservados.</p>
           </div>
-          <img src="assets/Logo.svg" class="bi mb-4 ms-4" width="40" height="40"></img>
+          <img src="assets/Logo.svg" class="bi ms-4" width="40" height="40" style="margin-bottom: 2rem;"></img>
         </div>
       </div>
     </div>
@@ -332,6 +336,56 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    var video = document.getElementById('meuVideo');
+
+    // Cria um IntersectionObserver
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Inicia o vídeo quando aparecer na tela
+          video.play();
+        } else {
+          // Pausa o vídeo quando sair da tela
+          video.pause();
+        }
+      });
+    });
+
+    // Observa o elemento de vídeo
+    observer.observe(video);
+  });
+
+  var isDesktop = window.matchMedia("(min-width: 992px)");
+
+  function handleOutsideClick(event) {
+    if (isDesktop.matches) { // Apenas aplica em telas desktop
+      var offcanvasElement = document.getElementById("offcanvas");
+      var navbarToggle = document.getElementById("navbarToggleExternalContent");
+
+      // Verifica se o clique foi fora do offcanvas
+      if (!offcanvasElement.contains(event.target) && !navbarToggle.contains(event.target)) {
+        // Fecha o offcanvas, se estiver aberto
+        var offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+        if (offcanvas && offcanvas._isShown) {
+          offcanvas.hide();
+        }
+
+        // Fecha o collapse, se estiver aberto
+        var collapseElement = new bootstrap.Collapse(navbarToggle, { toggle: false });
+        if (navbarToggle.classList.contains('show')) {
+          collapseElement.hide();
+        }
+      }
+    }
+  }
+
+  // Adiciona o event listener ao documento
+  document.addEventListener("click", handleOutsideClick);
+  // Atualiza automaticamente se a tela for redimensionada (opcional)
+  isDesktop.addEventListener('change', handleOutsideClick);
+  </script>
 </body>
 
 </html>

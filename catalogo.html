@@ -15,73 +15,72 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-md bg-dark sticky-top pb-0 d-block" data-bs-theme="dark">
-    <a class="navbar-brand" href="index.html">
+  <nav class="navbar navbar-expand-md bg-dark sticky-top p-3 d-block" data-bs-theme="dark">
+    <a class="navbar-brand" href="index.html" class="img-principal">
       <img src="assets/Logo.svg" class="bi" width="50" height="50"></img>
     </a>
-  <div class="container-menu">
-    <a class="navbar-brand-mobile" href="index.html">
-      <img src="assets/Logo.svg" class="bi" width="50" height="50"></img>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
-      aria-controls="offcanvas" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-      <div class="offcanvas-header">
-        <span>
+    <div class="div-menu">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="container-menu">
           <a class="navbar-brand-mobile" href="index.html">
             <img src="assets/Logo.svg" class="bi" width="50" height="50"></img>
           </a>
-        </span>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav flex-grow-1 justify-content-between align-items-center ">
-          <!-- <li class="nav-item"><a class="nav-link" href="#">
-              <svg class="bi" width="24" height="24">
-                <use xlink:href="#aperture"></use>
-              </svg>
-            </a></li> -->
-          <li class="nav-item "><a class="nav-link" href="index.html">Home</a></li>
-          <!-- <li class="nav-item "><a class="nav-link" href="catalogo.html">Catálogo</a></li> -->
-          <div class="btn-group mobile">
-            <button type="button" class="btn-mn dropdown-toggle m-0 w-100" data-bs-toggle="dropdown" aria-expanded="false">
-              Categorias
-            </button>
-            
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><button class="dropdown-item" type="button" href="catalogo.html">Todos</button></li>
-              <li><button class="dropdown-item" type="button" href="catalogo.html?filter=Copo">Copos e Taças</button></li>
-              <li><button class="dropdown-item" type="button" href="catalogo.html?filter=Beleza">Beleza</button></li>
-              <li><button class="dropdown-item" type="button" href="catalogo.html?filter=Outros">Outros</button></li>
-            </ul>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+            aria-controls="offcanvas" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+            <div class="offcanvas-header">
+              <span>
+                <a class="navbar-brand-mobile" href="index.html">
+                  <img src="assets/Logo.svg" class="bi" width="50" height="50"></img>
+                </a>
+              </span>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav flex-grow-1 justify-content-between align-items-center">
+                <li class="nav-item "><a class="nav-link" href="index.html">Home</a></li>
+                <div class="btn-group mobile">
+                  <div class="btn-group mobile">
+                    <button type="button" class="btn dropdown-toggle m-0 w-100" data-bs-toggle="dropdown" aria-expanded="false">
+                      Categorias
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="catalogo.html">Todos</a></li>
+                      <li><a class="dropdown-item" href="catalogo.html?filter=Copo">Copos e Taças</a></li>
+                      <li><a class="dropdown-item" href="catalogo.html?filter=Beleza">Beleza</a></li>
+                      <li><a class="dropdown-item" href="catalogo.html?filter=Outros">Outros</a></li>
+                    </ul>
+                  </div>
+                <li class="nav-item desktop">
+                  <button class="nav-link" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+                    aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    Categorias
+                  </button>
+                </li>
+                <li class="nav-item "><a class="nav-link" href="#sobre">Sobre</a></li>
+              </ul>
+            </div>
           </div>
-          <li class="nav-item desktop">      
-            <button class="nav-link" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" 
-            aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-              Categorias
-            </button>
-          </li>
-          <li class="nav-item "><a class="nav-link" href="#">Sobre</a></li>
-        </ul>
-
+        </div>
       </div>
-    </div>
-  </div>
-  <div style="padding: 0 17px;"></div>
-</nav>
-<div class="collapse p-0" id="navbarToggleExternalContent" data-bs-theme="dark">
-  <div class="bg-dark p-0">
-    <!-- <h5 class="text-body-emphasis h4 w-50 ms-4">Collapsed content</h5> -->
-    <ul class="m-0">
-      <li class="nav-item d-flex"><a class="nav-link" href="catalogo.html" style="color:white;margin: 1% auto;">Todos</a></li>
-      <li class="nav-item d-flex"><a class="nav-link" href="catalogo.html?filter=Copo" style="color:white;margin: 1% auto;">Copos e Taças</a></li>
-      <li class="nav-item d-flex"><a class="nav-link" href="catalogo.html?filter=Beleza" style="color:white;margin: 1% auto;">Beleza</a></li>
-      <li class="nav-item d-flex"><a class="nav-link" href="catalogo.html?filter=Outros" style="color:white;margin: 1% auto;">Outros</a></li>
-    </ul>
-  </div>
-</div>  
+
+      <div class="collapse w-100" id="navbarToggleExternalContent" data-bs-theme="dark">
+        <div class="bg-dark p-3">
+          <ul class="m-0 text-center p-0">
+            <li class="nav-item d-flex justify-content-center"><a class="nav-link" href="catalogo.html"
+                style="color:white;margin: 1% auto;">Todos</a></li>
+            <li class="nav-item d-flex justify-content-center"><a class="nav-link" href="catalogo.html?filter=Copo"
+                style="color:white;margin: 1% auto;">Copos e Taças</a></li>
+            <li class="nav-item d-flex justify-content-center"><a class="nav-link" href="catalogo.html?filter=Beleza"
+                style="color:white;margin: 1% auto;">Beleza</a></li>
+            <li class="nav-item d-flex justify-content-center"><a class="nav-link" href="catalogo.html?filter=Outros"
+                style="color:white;margin: 1% auto;">Outros</a></li>
+          </ul>
+        </div>
+      </div>
+  </nav>
 
 
   <div class="col-12 d-block mt-3">
@@ -129,7 +128,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="caneca-acrilico" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="caneca-acrilico" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -147,7 +146,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="caneca-chopp-cristal" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="caneca-chopp-cristal" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -165,7 +164,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="caneca-chopp-jateado" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="caneca-chopp-jateado" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -183,7 +182,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="caneca-porcelana" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="caneca-porcelana" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -201,7 +200,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="caneca-vidro-fosco" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="caneca-vidro-fosco" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -219,7 +218,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="copo-shot" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="copo-shot" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -237,7 +236,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="caneca-acrilico" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="long-drinks" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -255,7 +254,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="copo-stanley" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="copo-stanley" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -273,7 +272,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="copo-twister-cristal-com-borda" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="copo-twister-cristal-com-borda" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -291,7 +290,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="copo-twister-cristal-com-tampa" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="copo-twister-cristal-com-tampa" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -309,7 +308,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="copo-twister-degrade" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="copo-twister-degrade" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -327,7 +326,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="copo-twister-degrade-com-borda" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="copo-twister-degrade-com-borda" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -345,7 +344,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="copo-twister-degrade-com-tampa" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="copo-twister-degrade-com-tampa" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -363,7 +362,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="copo-twister-jateado" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="copo-twister-jateado" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -381,7 +380,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="copo-twister-jateado-com-tampa" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="copo-twister-jateado-com-tampa" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -399,7 +398,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="copo-twister-liso-com-borda" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="copo-twister-liso-com-borda" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -417,7 +416,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="copo-whisky" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="copo-whisky" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -435,7 +434,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="copo-whisky-degrade" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="copo-whisky-degrade" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -453,7 +452,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="garrafas-eco" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="garrafas-eco" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -471,7 +470,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="mini-xicaras" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="mini-xicaras" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -489,7 +488,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="taca-champagne" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="taca-champagne" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -507,7 +506,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="gin-bicolor" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="gin-bicolor" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -525,7 +524,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="gin-cristal-com-borda" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="gin-cristal-com-borda" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -543,7 +542,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="gin-degrade" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="gin-degrade" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -561,7 +560,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="gin-jateado" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="gin-jateado" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -579,7 +578,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="gin-lisa" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="gin-lisa" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -597,7 +596,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="escovas" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="escovas" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -615,7 +614,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="espelhos" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="espelhos" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -633,7 +632,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="gloss" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="gloss" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -643,7 +642,7 @@
         <div class="card">
           <div class="header-card">
             <div class="div-img">
-              <img src="assets/prdt/kit-pincel.webp" class="card-img-top" alt="gloss">
+              <img src="assets/prdt/kit-pincel.webp" class="card-img-top" alt="kit pincel">
             </div>
           </div>
           <div class="card-body p-0 pt-2">
@@ -651,7 +650,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="gloss" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="kit-pincel" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -661,7 +660,7 @@
         <div class="card">
           <div class="header-card">
             <div class="div-img">
-              <img src="assets/prdt/necessaire.webp" class="card-img-top" alt="gloss">
+              <img src="assets/prdt/necessaire.webp" class="card-img-top" alt="necessaire">
             </div>
           </div>
           <div class="card-body p-0 pt-2">
@@ -669,7 +668,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="necessaire" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="necessaire" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -687,7 +686,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="almofada" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="almofada" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -705,7 +704,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="azulejo" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="azulejo" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -719,11 +718,11 @@
             </div>
           </div>
           <div class="card-body p-0 pt-2">
-            <h5 class="card-title">Chaveiros Acrílicos</h5>
+            <h5 class="card-title">Chaveiros Acrílicos</h5> 
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="chaveiro-acrilico" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="chaveiro-acrilico" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -737,11 +736,11 @@
             </div>
           </div>
           <div class="card-body p-0 pt-2">
-            <h5 class="card-title">Chaveiros MDF</h5>
+            <h5 class="card-title">Chaveiros MDF</h5> 
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="chaveiro-mdf" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="chaveiro-mdf" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -759,7 +758,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="quadro" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="quadro" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -777,7 +776,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="lata" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="lata" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -795,7 +794,7 @@
           </div>
           <div class="footer-card">
             <ul class="list-unstyled mt-1">
-              <li><a href="#" class="view-more" data-product="brindes" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
+              <li><a href="#" class="view-more text-decoration-none" data-product="brindes" data-bs-toggle="modal" data-bs-target="#productModal">Veja mais...</a></li>
             </ul>
           </div>
         </div>
@@ -814,7 +813,7 @@
   <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
   
   <div class="position-relative overflow-hidden p-md-2 text-center w-100" style="background-color: #212529fa; color: #c3c6c9;">
-    <div class="col-md-8 p-lg-5 mx-auto my-3">
+    <div class="col-md-8 p-lg-5 mx-auto my-3" id="sobre">
       <h3 class="display-3 fw-bold mb-4">Sobre Nós</h3>
       <h5 style="display: flex; text-align: start; width: 90%; margin: 3% auto;">
         A *Ted Personalização* foi fundada em 2023 por Diego e Thaís, com o objetivo de transformar brindes em experiências marcantes para clientes de todos os ramos. 
@@ -847,7 +846,7 @@
             <h5>TeD Personalizações 2024.</h5>
             <p>Todos os direitos reservados.</p>
           </div>
-          <img src="assets/Logo.svg" class="bi mb-4 ms-4" width="40" height="40"></img>
+          <img src="assets/Logo.svg" class="bi ms-4" width="40" height="40" style="margin-bottom: 2rem;"></img>
         </div>
       </div>
     </div>
@@ -858,9 +857,14 @@
   <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header d-flex justify-content-between align-items-center">
           <h5 class="modal-title" id="productModalLabel">Detalhes do Produto</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="d-flex">
+            <button class="btn btn-primary me-2">
+              👋 Entre em contato
+            </button>
+            <button type="button" class="btn-close" style="margin: auto 10px;" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
         </div>
         <div class="modal-body">
           <!-- Carousel -->
@@ -991,6 +995,7 @@
       'gin-jateado':  43, 
       'gin-lisa':     12,
       'necessaire':   6,
+      'mini-xicara':  1,
       'quadro':       6,
       'lata':         10,
     };

@@ -1,191 +1,203 @@
-/* *{
-  overflow-x: hidden;
-} */
-
 body {
-    background-size: cover; /* Faz a imagem cobrir todo o fundo */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Impede que a imagem se repita */
-    overflow-x: hidden;
-  }
+  background-size: cover; /* Faz a imagem cobrir todo o fundo */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  overflow-x: hidden;
+}
 
-  .height-definido {
-    height: 90vw;
-  }
+.img-principal{
+  display: flex; 
+  left: 0; 
+  top: 0; 
+  position: absolute; 
+  margin: 0.3% 0 0 1%;
+}
 
-  .mobile, .desktop {
-    display: none;
-  }
+.div-menu{
+  width: 70%;
+}
 
-  ::-webkit-scrollbar {
-    width: 14px;
-    /* Largura da barra de rolagem */
-  }
+.height-definido {
+  height: 90vw;
+}
 
-  ::-webkit-scrollbar-thumb {
-    background: #414141 /* linear-gradient(180deg, #414141, #80F4FF);
-    border-radius: 10px; Bordas arredondadas do thumb */
-    /* border: 2px solid white; */
-  }
+.mobile, .desktop {
+  display: none;
+}
 
-  ::-webkit-scrollbar-thumb:hover {
-      /* background: linear-gradient(180deg, #414141, #70D7E7); Gradiente mais escuro ao passar o mouse */
-  }
+::-webkit-scrollbar {
+  width: 14px;
+  /* Largura da barra de rolagem */
+}
 
-  ::-webkit-scrollbar-thumb:active {
-      /* background: linear-gradient(180deg, #414141, #5DBFC5); Gradiente ainda mais escuro ao clicar */
-  }
+::-webkit-scrollbar-thumb {
+  background: #414141 /* linear-gradient(180deg, #414141, #80F4FF);
+  border-radius: 10px; Bordas arredondadas do thumb */
+  /* border: 2px solid white; */
+}
 
-  .custom-background {
-    background-image: url('assets/bg-n.svg');
-    background-size: cover; /* Faz a imagem cobrir todo o fundo */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Impede que a imagem se repita */
+::-webkit-scrollbar-thumb:hover {
+    /* background: linear-gradient(180deg, #414141, #70D7E7); Gradiente mais escuro ao passar o mouse */
+}
+
+::-webkit-scrollbar-thumb:active {
+    /* background: linear-gradient(180deg, #414141, #5DBFC5); Gradiente ainda mais escuro ao clicar */
+}
+
+.custom-background {
+  background-image: url('assets/bg-n.svg');
+  background-size: cover; /* Faz a imagem cobrir todo o fundo */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
 }
 
 
-  .offcanvas-body {
-    padding-top: 20px;
-  }
+.offcanvas-body {
+  padding-top: 20px;
+}
 
-  .card {
-    width: 18rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%; /* Faz com que o card ocupe 100% da altura disponível */
-  }
-  
-  /* Controle da imagem */
-  .img-controle {
-    height: 250px; /* Altura fixa para as imagens */
-    overflow: hidden;
-  }
-  .div-img{
-    display: flex; margin: 0 auto; height:225px;
-  }
-  .header-card{
-    position: relative;
-    cursor: pointer;
-  } 
-  .div-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Faz a imagem se ajustar ao container sem distorcer */
-  }
-  .img-controle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Faz a imagem se ajustar ao container sem distorcer */
-  }
+.card {
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Faz com que o card ocupe 100% da altura disponível */
+}
 
-  .footer-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  /* Corpo do card */
-  .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
-  }
-  
-  /* Título */
-  .card-title {
-    text-align: center;
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-  }
-  
-  /* Link de "Veja mais" */
-  .card-body ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-  
-  .card-body ul li {
-    text-align: center;
-  }
-  
-  /* Controle do grid */
-  .product {
-    display: flex;
-    justify-content: center;
-  }
+/* Controle da imagem */
+.img-controle {
+  height: 250px; /* Altura fixa para as imagens */
+  overflow: hidden;
+}
+.div-img{
+  display: flex; margin: 0 auto; height:225px;
+}
+.header-card{
+  position: relative;
+  cursor: pointer;
+} 
+.div-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem se ajustar ao container sem distorcer */
+}
+.img-controle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem se ajustar ao container sem distorcer */
+}
 
-  .fixed-icon {
-    bottom: 20px;
-    /* Distância do canto inferior da tela */
-    font-size: 3rem;
-    /* Ajuste o tamanho do ícone conforme necessário */
-    color: #007bff;
-    /* Cor do ícone, ajuste conforme necessário */
-    z-index: 1000;
-    /* Garante que o ícone fique acima de outros elementos */
-  }
+.footer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Corpo do card */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
 
-  .fixed-circle {
-    position: fixed;
-    /* Fixa o círculo no canto da tela */
-    right: 20px;
-    /* Distância do canto direito da tela */
-    bottom: 20px;
-    /* Distância do canto inferior da tela */
-    width: 90px;
-    /* Largura do círculo */
-    height: 90px;
-    /* Altura do círculo */
-    background-color: #04c704;
-    /* Cor de fundo do círculo */
-    border-radius: 50%;
-    /* Torna o elemento circular */
-    display: flex;
-    /* Centraliza o ícone dentro do círculo */
-    justify-content: center;
-    /* Centraliza horizontalmente */
-    align-items: center;
-    /* Centraliza verticalmente */
-    z-index: 1000;
-    /* Garante que o círculo fique acima de outros elementos */
-    transition: transform 0.3s ease;
-    /* Suaviza a transição de escala */
-  }
+/* Título */
+.card-title {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
 
-  .fixed-circle i {
-    color: white;
-    /* Cor do ícone */
-    font-size: 2.8rem;
-    /* Tamanho do ícone */
-  }
+/* Link de "Veja mais" */
+.card-body ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
 
-  .fixed-circle:hover {
-    transform: scale(1.2);
-    /* Aumenta o tamanho do círculo e do ícone ao passar o mouse */
-  }
+.card-body ul li {
+  text-align: center;
+}
 
-   .products-div{
-    width: 90%!important;
-  }
-  
-  .card-mob{
-    width: 90%;
-  }
-  
-  .carousel-control-prev-icon {
-    background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 fill%3D%22%23007bff%22 viewBox%3D%220 0 16 16%22%3E%3Cpath fill-rule%3D%22evenodd%22 d%3D%22M11.354 15.354a.5.5 0 0 0 0-.708L5.707 9l5.647-5.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 0 .708l6 6a.5.5 0 0 0 .708 0z%22/%3E%3C/svg%3E');
-    background-size: 100% 100%;
-  }
-  
-  /* Customizar o ícone da seta próxima (next) */
-  .carousel-control-next-icon {
-    background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 fill%3D%22%23007bff%22 viewBox%3D%220 0 16 16%22%3E%3Cpath fill-rule%3D%22evenodd%22 d%3D%22M4.646 15.354a.5.5 0 0 1 0-.708L10.293 9 4.646 3.354a.5.5 0 0 1 .708-.708l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708 0z%22/%3E%3C/svg%3E');
-    background-size: 100% 100%;
-  }
+/* Controle do grid */
+.product {
+  display: flex;
+  justify-content: center;
+}
+
+.fixed-icon {
+  bottom: 20px;
+  /* Distância do canto inferior da tela */
+  font-size: 3rem;
+  /* Ajuste o tamanho do ícone conforme necessário */
+  color: #007bff;
+  /* Cor do ícone, ajuste conforme necessário */
+  z-index: 1000;
+  /* Garante que o ícone fique acima de outros elementos */
+}
+
+.fixed-circle {
+  position: fixed;
+  /* Fixa o círculo no canto da tela */
+  right: 20px;
+  /* Distância do canto direito da tela */
+  bottom: 20px;
+  /* Distância do canto inferior da tela */
+  width: 90px;
+  /* Largura do círculo */
+  height: 90px;
+  /* Altura do círculo */
+  background-color: #04c704;
+  /* Cor de fundo do círculo */
+  border-radius: 50%;
+  /* Torna o elemento circular */
+  display: flex;
+  /* Centraliza o ícone dentro do círculo */
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  align-items: center;
+  /* Centraliza verticalmente */
+  z-index: 1000;
+  /* Garante que o círculo fique acima de outros elementos */
+  transition: transform 0.3s ease;
+  /* Suaviza a transição de escala */
+}
+
+.fixed-circle i {
+  color: white;
+  /* Cor do ícone */
+  font-size: 2.8rem;
+  /* Tamanho do ícone */
+}
+
+.fixed-circle:hover {
+  transform: scale(1.2);
+  /* Aumenta o tamanho do círculo e do ícone ao passar o mouse */
+}
+
+  .products-div{
+  width: 90%!important;
+}
+
+.card-mob{
+  width: 90%;
+}
+
+.carousel-control-prev-icon {
+  background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 fill%3D%22%23007bff%22 viewBox%3D%220 0 16 16%22%3E%3Cpath fill-rule%3D%22evenodd%22 d%3D%22M11.354 15.354a.5.5 0 0 0 0-.708L5.707 9l5.647-5.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 0 .708l6 6a.5.5 0 0 0 .708 0z%22/%3E%3C/svg%3E');
+  background-size: 100% 100%;
+}
+
+/* Customizar o ícone da seta próxima (next) */
+.carousel-control-next-icon {
+  background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 fill%3D%22%23007bff%22 viewBox%3D%220 0 16 16%22%3E%3Cpath fill-rule%3D%22evenodd%22 d%3D%22M4.646 15.354a.5.5 0 0 1 0-.708L10.293 9 4.646 3.354a.5.5 0 0 1 .708-.708l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708 0z%22/%3E%3C/svg%3E');
+  background-size: 100% 100%;
+}
 /* Exibe a div apenas em telas maiores (desktop) */
 @media only screen and (min-width: 768px) {
+  .container-menu{
+      width: 100%;
+  }
+
   #titulo-categoria-mob{
     display: none;
   }
@@ -246,6 +258,20 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .img-principal{
+      display: none!important;
+  }
+  .div-menu{
+    width: 100%;
+  }
+  .container-menu{
+    width: 100%!important;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 !important;
+    padding: 0.5rem;
+  }
+
   #titulo-categoria{
     display: none;
   }
@@ -278,13 +304,6 @@ body {
     height: 40vh;  
   }
 
-  .container-menu{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 !important;
-    padding: 0.5rem;
-  }
-
   .container{
     margin: 1rem auto!important;
   }
@@ -297,16 +316,26 @@ body {
     height: 10rem!important;
   }
 
+  /* .btn {
+    color: #000000!important;
+    font-size: 22px!important;
+    border: none;
+  } */
+
   .btn-mn {
     color: #adb5bd!important;
     font-size: 22px!important;
     border: none;
     background: none;
   }
+
   .nav-link {
     color: #adb5bd!important;
     font-size: 22px!important;
     margin: 1rem auto!important;
+  }
+  .nav-item{
+    text-align: center;
   }
 
   .dropdown-menu{
