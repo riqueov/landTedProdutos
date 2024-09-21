@@ -36,13 +36,13 @@ body {
   /* border: 2px solid white; */
 }
 
-::-webkit-scrollbar-thumb:hover {
-    /* background: linear-gradient(180deg, #414141, #70D7E7); Gradiente mais escuro ao passar o mouse */
+/* ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #414141, #70D7E7); Gradiente mais escuro ao passar o mouse
 }
 
 ::-webkit-scrollbar-thumb:active {
-    /* background: linear-gradient(180deg, #414141, #5DBFC5); Gradiente ainda mais escuro ao clicar */
-}
+    background: linear-gradient(180deg, #414141, #5DBFC5); Gradiente ainda mais escuro ao clicar
+} */
 
 .custom-background {
   background-image: url('assets/bg-n.svg');
@@ -348,4 +348,5 @@ body {
   .dropdown-item{
     margin: 1rem auto!important;
   }
+
 }   

@@ -38,13 +38,13 @@ body{
     /* border: 2px solid white; */
 }
 
-::-webkit-scrollbar-thumb:hover {
-    /* background: linear-gradient(180deg, #414141, #70D7E7); Gradiente mais escuro ao passar o mouse */
+/* ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #414141, #70D7E7); Gradiente mais escuro ao passar o mouse
 }
 
 ::-webkit-scrollbar-thumb:active {
-    /* background: linear-gradient(180deg, #414141, #5DBFC5); Gradiente ainda mais escuro ao clicar */
-}
+    background: linear-gradient(180deg, #414141, #5DBFC5); Gradiente ainda mais escuro ao clicar
+} */
 
 .container {
     display: flex;
@@ -228,7 +228,7 @@ body{
         background-color: #212529fa;
         color: #c3c6c9;
     }
-    
+    .distancia{height:22vh;}
 }
 @media (max-width: 768px) {
     .img-principal{
@@ -349,4 +349,10 @@ body{
         padding: 25px 5px;
     }
 
+    .distancia{height:30vh!important;}
+    .carousel-inner video,
+    .carousel-inner img {
+      height: auto; /* Para telas menores, deixar o height se ajustar */
+      max-height: 60vh; /* Define uma altura menor para mobile */
+    }
 }  
