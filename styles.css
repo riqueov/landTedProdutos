@@ -22,9 +22,9 @@ body{
 }
   
 .custom-background {
-    background-image: url('assets/bg-n 1.png');
-    background-size: cover; /* Faz a imagem cobrir todo o fundo */
-    background-position: center; /* Centraliza a imagem */
+    background-image: url('assets/bkg-logo.svg');
+    background-size: 50%; /* Faz a imagem cobrir todo o fundo */
+    background-position: top; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Impede que a imagem se repita */
 }
 
@@ -136,11 +136,11 @@ body{
     }
 
     .img-carrocel{
-        height: 500px;
+        /* height: 500px; */
     }
     .div-conteudo{
-        display: flex;
-        width: 85%;
+        /* display: flex; */
+        width: 100%;
         align-items: center;
         justify-content: center;
     }    
@@ -207,13 +207,13 @@ body{
     }
 
     .image-div-slide{
-        display: flex;
-        margin-top: 5%;
+        /* display: flex;
+        margin-top: 5%; */
         justify-content: center;
     }
 
     .imagens-slide{       
-        width: 90%; 
+        width: 100%; 
         margin: auto; 
         background: #181818;    
         box-shadow: rgba(208, 236, 238, 0.4) 5px 5px, rgba(208, 236, 238, 0.3) 10px 10px, rgba(208, 236, 238, 0.2) 15px 15px, 
@@ -316,8 +316,8 @@ body{
     }
 
     .image-div-slide{
-        display: block;
-        margin-top: 5%;
+        /* display: block;
+        margin-top: 5%; */
     }
     
     .imagens-slide{
@@ -329,11 +329,15 @@ body{
         margin: auto;
     }
 
-    .img-carrocel img {
+    /* .img-carrocel img {
         height: 400px;    
         width: auto;      
         object-fit: cover;
         margin: 50px auto;
+    } */
+    .ted-h1{
+        width: 76%;
+        margin:3rem auto 0;
     }
 
     .texto-conteudo{
@@ -349,10 +353,10 @@ body{
         padding: 25px 5px;
     }
 
-    .distancia{height:30vh!important;}
-    .carousel-inner video,
-    .carousel-inner img {
-      height: auto; /* Para telas menores, deixar o height se ajustar */
-      max-height: 60vh; /* Define uma altura menor para mobile */
+    .custom-background {
+        background-image: none!important;
+        width: 100%;
+        margin: auto;
     }
+    
 }  
